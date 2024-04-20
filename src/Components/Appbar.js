@@ -10,9 +10,11 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import logo from "./../Resources/MLogo.png";
+import logo from "./../Resources/MeasureUP Logo final.png";
 import "./styles.css";
 import { Link } from "react-scroll";
+import { WidthFull } from "@mui/icons-material";
+import { styled } from "@mui/material";
 
 const pages = ["Contact Us", "Team", "Support"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -41,52 +43,75 @@ function Appbar() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
+  const LogoBox = styled(Box)({
+  });
+
+  const ButtonGroup = styled(Box)({
+    display: { xs: "none", md: "flex" },
+    flexDirection: "row",
+    marginLeft: "10%",
+    
+
+  });
+
+  const RightButtonBox = styled(Box)({
+    marginLeft: "auto",
+
+  });
+
+  const ResposiveLogoBox = styled(Box)({
+    marginLeft: "20%",
+
+  });
+
+  const ResposiveMenuBox = styled(Box)({
+
+  });
+
+  const ButtonMiddle = styled(Button)({
+    fontFamily: "Poppins",
+    color : "#000000",
+  });
+
+  const IntrestedButton = styled(Button)({
+    borderRadius: "10%"
+  });
+
+  const ButtonItalic = styled(ButtonMiddle)({
+    fontFamily: "Poppins",
+    fontStyle: "italic",
+    textTransform: "none"
+  });
+  
+
+  const LogoImage = styled('img')({
+    width : "350px",
+  });
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#000000" }} id="appbar">
+    <AppBar position="static" sx={{ backgroundColor: "#ffff" }} id="appbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <img
+          <LogoBox sx={{ display: { xs: "none", md: "flex" } }}>
+            <LogoImage
               src={logo}
               alt="Logo"
               className="logo_front"
               style={{
-                width: "40px",
-                height: "40px",
                 marginRight: "10px",
               }}
             />
-          </Box> */}
+          </LogoBox>
 
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Helvetica",
-              fontWeight: 700,
-              letterSpacing: "-0.1rem",
-              color: "inherit",
-              textDecoration: "none",
-              ml: "10px",
-            }}
-          >
-            MeasureUP
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <ResposiveMenuBox sx={{display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#000000"
             >
               <MenuIcon />
             </IconButton>
@@ -109,10 +134,13 @@ function Appbar() {
               }}
             >
               <MenuItem onClick={() => scrollToSection("team")}>
-                <Typography textAlign="center">Team</Typography>
+                HOW IT WORKS
               </MenuItem>
               <MenuItem onClick={() => scrollToSection("support")}>
-                <Typography textAlign="center">Support</Typography>
+                #MadeInSriLanka
+              </MenuItem>
+              <MenuItem onClick={() => scrollToSection("support")}>
+                INTRESTED
               </MenuItem>
               {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -120,101 +148,38 @@ function Appbar() {
                 </MenuItem>
               ))} */}
             </Menu>
-          </Box>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <img
+          </ResposiveMenuBox>
+          <ResposiveLogoBox sx={{ display: { xs: "flex", md: "none" } }}>
+            <LogoImage
               src={logo}
               alt="Logo"
               className="logo_middle"
-              style={{
-                width: "40px",
-                height: "40px",
-                marginRight: "10px",
-              }}
             />
-          </Box> */}
-
-          <Typography
-            variant="h4"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "Helvetica",
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "inherit",
-              textDecoration: "none",
-              ml: "10px",
-            }}
-          >
-            MeasureUP
-          </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
-            }}
-          >
-            {/* <Button
-              variant="outlined"
-              color="success"
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                justifyContent: "flex-end",
-                margin: "0 16px",
-              }}
-              onClick={() => scrollToSection("support")}
-            >
-              Contact Us
-            </Button> */}
-            <Button
-              variant="outlined"
-              color="success"
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                justifyContent: "flex-end",
-                margin: "0 16px",
-              }}
+          </ResposiveLogoBox>
+          <ButtonGroup sx={{display: {xs: "none", md: "flex"}}}>
+            <ButtonMiddle
+              variant="text"
+              size="large"
               onClick={() => scrollToSection("team")}
             >
-              Team
-            </Button>
-            <Button
-              variant="outlined"
-              color="success"
-              sx={{
-                my: 2,
-                color: "white",
-                display: "block",
-                justifyContent: "flex-end",
-                margin: "0 16px",
-              }}
+              HOW IT WORKS
+            </ButtonMiddle>
+            <ButtonItalic
+              variant="text"
+              size="large"
               onClick={() => scrollToSection("support")}
             >
-              Support
-            </Button>
-            {/* {pages.map((page) => (
-              <Button 
-                key={page}
-                onClick={handleCloseNavMenu}
-                variant="outlined"
-                color="success"
-                sx={{ my: 2, color: "white", display: "block", justifyContent:"flex-end", margin: '0 16px' }}
+              #MadeInSriLanka
+            </ButtonItalic>
+          </ButtonGroup>
+          <RightButtonBox sx={{display: {xs: "none", md: "flex"}}}>
+              <IntrestedButton
+                variant="contained"
+                size="large"
               >
-                {page}
-              </Button>
-            ))} */}
-          </Box>
+                Intrested
+              </IntrestedButton>
+          </RightButtonBox>
         </Toolbar>
       </Container>
     </AppBar>
