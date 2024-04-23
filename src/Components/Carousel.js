@@ -8,7 +8,17 @@ function CarouselSection() {
   return (
     <>
     <Box>
-        <Carousel>
+        <Carousel indicatorIconButtonProps={{
+            style: {
+                color: "#9FC7FF",
+                
+            }
+        }} activeIndicatorIconButtonProps={{
+            style: {
+                color: '#026CFF' // 2
+            }
+        }}>
+
             {
                 CarouselData.map((item,i) => <CarouselItem key={i} item={item} />)
             }
