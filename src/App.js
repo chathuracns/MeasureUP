@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import AboutUnique from "./Components/AboutUnique";
 import Appbar from "./Components/Appbar";
 import CarouselSection from "./Components/Carousel";
 import CarouselItem from "./Components/CarouselItem";
@@ -26,6 +27,7 @@ function App() {
       {/* <TeamSection /> */}
 
       <HowItWorks />
+      <AboutUnique />
 
       <SupportSection />
 

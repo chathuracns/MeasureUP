@@ -140,6 +140,9 @@ function Appbar() {
                 #MadeInSriLanka
               </MenuItem>
               <MenuItem onClick={() => scrollToSection("support")}>
+                ABOUT
+              </MenuItem>
+              <MenuItem onClick={() => scrollToSection("support")}>
                 INTRESTED
               </MenuItem>
               {/* {pages.map((page) => (
@@ -171,6 +174,13 @@ function Appbar() {
             >
               #MadeInSriLanka
             </ButtonItalic>
+            <ButtonMiddle
+              variant="text"
+              size="large"
+              onClick={() => scrollToSection("team")}
+            >
+              ABOUT
+            </ButtonMiddle>
           </ButtonGroup>
           <RightButtonBox sx={{display: {xs: "none", md: "flex"}}}>
               <IntrestedButton
