@@ -4,6 +4,7 @@ import Appbar from "./Components/Appbar";
 import CarouselSection from "./Components/Carousel";
 import CarouselItem from "./Components/CarouselItem";
 import Footer from "./Components/Footer";
+import HowItWorks from "./Components/HowItWorks";
 import IntroSection from "./Components/IntroSection";
 import SupportSection from "./Components/SupportSection";
 import TeamSection from "./Components/TeamSection";
@@ -23,6 +24,8 @@ function App() {
       {/* <IntroSection /> */}
 
       {/* <TeamSection /> */}
+
+      <HowItWorks />
 
       <SupportSection />
 

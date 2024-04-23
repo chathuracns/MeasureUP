@@ -1,13 +1,17 @@
 import React from 'react'
 import CarouselData from '../Data/CarouselData'
 import CarouselItem from './CarouselItem'
-import { Box } from '@mui/material'
+import { Box, styled } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
+
+const CarouselContainer = styled(Box)({
+    marginTop:"6.5%"
+});
 
 function CarouselSection() {
   return (
     <>
-    <Box>
+    <CarouselContainer>
         <Carousel indicatorIconButtonProps={{
             style: {
                 color: "#9FC7FF",
@@ -23,7 +27,7 @@ function CarouselSection() {
                 CarouselData.map((item,i) => <CarouselItem key={i} item={item} />)
             }
         </Carousel>
-    </Box>
+    </CarouselContainer>
     </>
   )
 }

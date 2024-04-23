@@ -90,7 +90,7 @@ function Appbar() {
   });
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#ffff" }} id="appbar">
+    <AppBar position="fixed" sx={{ backgroundColor: "#ffff" }} id="appbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <LogoBox sx={{ display: { xs: "none", md: "flex" } }}>
