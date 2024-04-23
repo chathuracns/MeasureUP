@@ -86,7 +86,7 @@ function Appbar() {
   
 
   const LogoImage = styled('img')({
-    width : "350px",
+    width : "310px",
   });
 
   return (

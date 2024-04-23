@@ -1,6 +1,8 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import Appbar from "./Components/Appbar";
+import CarouselSection from "./Components/Carousel";
+import CarouselItem from "./Components/CarouselItem";
 import Footer from "./Components/Footer";
 import IntroSection from "./Components/IntroSection";
 import SupportSection from "./Components/SupportSection";
@@ -17,9 +19,10 @@ function App() {
   return (
     <>
       <Appbar />
-      <IntroSection />
+      <CarouselSection/>
+      {/* <IntroSection /> */}
 
-      <TeamSection />
+      {/* <TeamSection /> */}
 
       <SupportSection />
 
