@@ -15,6 +15,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SupportImage from "./../Resources/MeasureUP png_5.jpg";
 
 const SupportSection = () => {
   const PictureSection = styled(Box)(({ theme }) => ({
@@ -27,9 +28,17 @@ const SupportSection = () => {
     [theme.breakpoints.down("md")]: {
       marginLeft: "20%",
       marginBottom: "10%",
-      width:"70%"
+      width: "70%",
     },
   }));
+
+  const ContentBox = styled(Box)({
+    fontFamily: "Poppins",
+  });
+
+  const Text = styled(Typography)({
+    fontFamily: "Poppins",
+  });
 
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(true);
@@ -48,105 +57,50 @@ const SupportSection = () => {
       console.log("In sending mail");
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         (result) => {
+          toast("Email sent successfully!");
           console.log(result.text);
+          console.log("Send successful before toast");
+          toast("Email sent successfully!");
           setLoading(false);
-          toast.success(
-            "Thank you for your time, Our team will be in touch with you shortly :)",
-            {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            }
-          );
         },
         (error) => {
           console.log(error.text);
         }
       );
-      // setLoading(false);
-      console.log("Send successful");
     } catch (error) {
       console.error("Error sending email:", error);
     }
+    toast("Email sent successfully!");
   };
 
   return (
     <>
-      <Box
-        sx={{ display: "flex", flexDirection: "row", background: "#E6FAE6" }}
-        id="support"
-      >
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          style={{ width: "580px" }}
-        />
-        <Box
-          sx={{
-            mb: 2,
-            zIndex: 1,
-            position: "fixed",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "80%",
-          }}
-          className="alert"
-        >
-          <Collapse in={open} sx={{}}>
-            <Alert
-              action={
-                <IconButton
-                  aria-label="close"
-                  color="inherit"
-                  size="small"
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                >
-                  <CloseIcon fontSize="inherit" />
-                </IconButton>
-              }
-            >
-              Thank you for your time, our team will contact you soon!
-            </Alert>
-          </Collapse>
-        </Box>
-        <ContentSection sx={{ width: "60%", ml: "3%", mt: "10%" }}>
-          <Typography variant="h5" sx={{ fontWeight: 800 }} gutterBottom>
+      <ContentBox sx={{ display: "flex", flexDirection: "row" }} id="support">
+        <ToastContainer />
+        <ContentSection sx={{ width: "60%", ml: "10%", mt: "10%" }}>
+          <Text variant="h5" sx={{ fontWeight: 650 }} gutterBottom>
             Interested in trying Measure Up?
-          </Typography>
-          <Typography variant="body1" sx={{ fontWeight: 300 }} gutterBottom>
+          </Text>
+          <Text variant="body1" sx={{ fontWeight: 300 }} gutterBottom>
             If you'd like to show support for MeasureUP, please share your
             details, and our support team will be in touch. Thank you for
             considering us!
-          </Typography>
+          </Text>
           <Box className="form_section">
             <form onSubmit={sendEmail} ref={form}>
               <Box>
-                <Typography
+                <Text
                   variant="body1"
                   display="block"
                   sx={{ ml: "1%", fontWeight: 500 }}
                   gutterBottom
                 >
                   Name:
-                </Typography>
+                </Text>
                 <TextField
                   required
                   id="name"
                   size="small"
-                  color="success"
                   sx={{ width: "95%", mt: "0px" }}
                   name="name"
                   type="text"
@@ -154,19 +108,18 @@ const SupportSection = () => {
                 />
               </Box>
               <Box sx={{ mt: "2%" }}>
-                <Typography
+                <Text
                   variant="body1"
                   display="block"
                   sx={{ ml: "1%", fontWeight: 500 }}
                   gutterBottom
                 >
                   Email:
-                </Typography>
+                </Text>
                 <TextField
                   required
                   id="email"
                   size="small"
-                  color="success"
                   sx={{ width: "95%", mt: "0px" }}
                   name="email"
                   type="email"
@@ -187,9 +140,9 @@ const SupportSection = () => {
                 <LoadingButton
                   loading={loading}
                   variant="contained"
-                  color="success"
                   type="submit"
                   value="Send"
+                  size="large"
                 >
                   Submit
                 </LoadingButton>
@@ -201,13 +154,13 @@ const SupportSection = () => {
         <PictureSection sx={{ ml: "10%" }}>
           <Box
             sx={{
-              background: `url('${background}') lightgray 50% / cover no-repeat`,
-              height: "680px", // Set a height for the background to be visible
-              width: "650px",
+              background: `url('${SupportImage}') #ffffff 50% / cover no-repeat`,
+              height: "550px", // Set a height for the background to be visible
+              width: "600px",
             }}
           ></Box>
         </PictureSection>
-      </Box>
+      </ContentBox>
     </>
   );
 };

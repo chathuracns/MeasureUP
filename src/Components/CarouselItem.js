@@ -18,7 +18,7 @@ function mapImages(id) {
 const MainContainer = styled(Box)({
     backgroundColor: "#9FC7FF",
     width: "100%",
-    height: "80vh",
+    height: "82vh",
     display:"flex",
     flexDirection: "row",
 });

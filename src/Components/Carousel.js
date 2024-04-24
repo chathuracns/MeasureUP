@@ -5,7 +5,7 @@ import { Box, styled } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
 
 const CarouselContainer = styled(Box)({
-    marginTop:"6.5%"
+    marginTop:"5%"
 });
 
 function CarouselSection() {
@@ -21,7 +21,9 @@ function CarouselSection() {
             style: {
                 color: '#026CFF' // 2
             }
-        }}>
+        }}
+        navButtonsAlwaysVisible = {true}
+        >
 
             {
                 CarouselData.map((item,i) => <CarouselItem key={i} item={item} />)

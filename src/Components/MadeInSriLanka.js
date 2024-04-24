@@ -8,14 +8,14 @@ const ContainerBox = styled(Box)({
 });
 
 const LeftBox = styled(Box)({
-  width: "60%",
+  width: "65%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 });
 
 const RightBox = styled(Box)({
-  width: "50%",
+  width: "35%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -32,7 +32,7 @@ const SriLankaImage = styled("img")({
 });
 
 const TextBox = styled(Box)({
-  width: "60%",
+  width: "70%",
   
 });
 
