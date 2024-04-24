@@ -1,153 +1,103 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
 import React from "react";
-import logo from "./../Resources/MLogo.png";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import logo from "./../Resources/MeasureUP Logo final white.png";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from "react-scroll";
 
-const Footer = () => {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if(section) {
-      section.scrollIntoView({behavior: "smooth"})
-    }
-  };
+const ContainerBox = styled(Box)({
+  backgroundColor: "#1578FF",
+  height: "20vh",
+  display: "flex",
+  flexDirection: "row",
+  color: "white",
+});
 
+const LeftBox = styled(Box)({
+  width: "33%",
+});
+
+const MidBox = styled(Box)({
+  width: "55%",
+  display: "flex",
+  alignItems: "center",
+});
+
+const RightBox = styled(Box)({
+  width: "12%",
+  display: "flex",
+  justifyContent: "center",
+});
+
+const LogoBox = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+});
+
+const LogoImage = styled("img")({
+  width: "230px",
+});
+
+const LogoText = styled(Typography)({
+    fontFamily: "Poppins",
+    fontSize: "30px",
+    fontStyle: "italic",
+    marginLeft: "2%",
+    marginTop: "-2%"
+});
+
+const NavButtonBox= styled(Box)({
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "2%"
+    
+});
+
+const NavButton = styled(Button)({
+    width: "20%",
+    "&:hover": {
+        background: "none",
+    },
+    "&:active": {
+        background: "none",
+    },
+    color: "white",
+    maxHeight: "20px",
+    minWidth: "150px"
+});
+
+const SocialMediaButton = styled(Button)({
+    color: "white",
+});
+
+function Footer() {
   return (
     <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          backgroundColor: "#000000",
-          color: "#ffffff",
-        }}
-      >
-        <Box>
-          <Box sx={{ display: "flex", mt: "5%" }}>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              sx={{
-                mt: "4%",
-                fontFamily: "Helvetica",
-                fontWeight: 700,
-                letterSpacing: ".1rem",
-                color: "inherit",
-                textDecoration: "none",
-                ml: "0%",
-                cursor:"pointer"
-              }}
-              onClick={() => scrollToSection("appbar")}
-            >
-              MeasureUP
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          className="links_section"
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            mt: "1%",
-          }}
-        >
-          {/* <Typography
-            sx={{
-              "&:hover": {
-                textDecoration: "underline",
-              },
-              transition: "text-decoration 0.3s ease",
-              mr: "30%",
-              whiteSpace: "nowrap", 
-              cursor: "pointer"// Add a transition for a smoother effect
-            }}
-            variant="caption"
-
-          >
-            Contact Us
-          </Typography> */}
-          <Typography
-            sx={{
-              "&:hover": {
-                textDecoration: "underline",
-              },
-              transition: "text-decoration 0.3s ease", // Add a transition for a smoother effect
-              mr: "30%",
-              cursor: "pointer"
-            }}
-            variant="caption"
-            onClick={() => scrollToSection("team")}
-          >
-            Team
-          </Typography>
-          <Typography
-            sx={{
-              "&:hover": {
-                textDecoration: "underline",
-              },
-              transition: "text-decoration 0.3s ease",
-              cursor: "pointer" // Add a transition for a smoother effect
-            }}
-            variant="caption"
-            onClick={()=> scrollToSection("support")}
-          >
-            Support
-          </Typography>
-        </Box>
-        <Box
-          className="social_media_section"
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            mt: "1%",
-            justifyContent: "center",
-          }}
-        >
-          <Avatar
-            style={{
-              backgroundColor: "#1877f2", // Facebook blue
-            }}
-            sx={{ mr: "10%" }}
-          >
-            <FacebookIcon />
-          </Avatar>
-          <Avatar
-            style={{
-              backgroundColor: "#1da1f2", // Twitter blue
-            }}
-            sx={{ mr: "10%" }}
-          >
-            <TwitterIcon />
-          </Avatar>
-          <Avatar
-            style={{
-              backgroundColor: "#c13584", // Instagram pink
-            }}
-            sx={{ mr: "10%" }}
-          >
-            <InstagramIcon />
-          </Avatar>
-          <Avatar
-            style={{
-              backgroundColor: "#0077b5", // LinkedIn blue
-            }}
-          >
-            <LinkedInIcon />
-          </Avatar>
-        </Box>
-        <Box sx={{ mt: "1%", mb: "3%" }}>
-          <Typography variant="body2">
-            © 2023 MeasureUP. All rights reserved.
-          </Typography>
-        </Box>
-      </Box>
+      <ContainerBox>
+        <LeftBox>
+          <LogoBox>
+            <LogoImage src={logo} />
+            <LogoText>#MadeInSriLanka</LogoText>
+          </LogoBox>
+        </LeftBox>
+        <MidBox>
+            <NavButtonBox>
+                <NavButton  variant="text" disableRipple>HOW IT WORKS</NavButton>
+                <NavButton  variant="text" disableRipple>ABOUT</NavButton>
+                <NavButton  variant="text" disableRipple>INTRESTED</NavButton>
+            </NavButtonBox>
+        </MidBox>
+        <RightBox>
+            <SocialMediaButton size="small">
+                <FacebookIcon fontSize="large"/>
+            </SocialMediaButton>
+            <SocialMediaButton size="small">
+                <LinkedInIcon fontSize="large"/>
+            </SocialMediaButton>
+        </RightBox>
+      </ContainerBox>
     </>
   );
-};
+}
 
 export default Footer;
