@@ -36,7 +36,7 @@ const RightContainer = styled(Box)({
 
 const TextContainer = styled(Box)({
     width: "80%",
-    marginLeft: "7%",
+    marginLeft: "33%",
 });
 
 const ButtonBox = styled(Box)({

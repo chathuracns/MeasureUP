@@ -26,7 +26,7 @@ const TextBox = styled(Box)({
 
 const HeadingText = styled(Typography)({
   fontFamily: "Poppins",
-  fontSize: "27px",
+  fontSize: "32px",
   fontWeight: "650",
   marginBottom: "10%",
 });

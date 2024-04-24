@@ -24,7 +24,7 @@ const RightBox = styled(Box)({
 });
 
 const QuoteTextBox = styled(Box)({
-  width: "35%",
+  width: "38%",
 });
 
 const QuoteText = styled(Typography)({
