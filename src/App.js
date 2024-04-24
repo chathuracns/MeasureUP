@@ -7,6 +7,7 @@ import CarouselItem from "./Components/CarouselItem";
 import Footer from "./Components/Footer";
 import HowItWorks from "./Components/HowItWorks";
 import IntroSection from "./Components/IntroSection";
+import MadeInSriLanka from "./Components/MadeInSriLanka";
 import SupportSection from "./Components/SupportSection";
 import TeamSection from "./Components/TeamSection";
 
@@ -30,6 +31,8 @@ function App() {
       <AboutUnique />
 
       <SupportSection />
+
+      <MadeInSriLanka />
 
       <Footer />
       {/* <h1>Hi this is measure up</h1> */}
