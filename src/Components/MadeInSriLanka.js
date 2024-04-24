@@ -24,7 +24,7 @@ const RightBox = styled(Box)({
 
 const ImageBox = styled(Box)({
   width: "70%",
-  marginLeft: "10%"
+  marginLeft: "0%"
 });
 
 const SriLankaImage = styled("img")({

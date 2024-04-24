@@ -32,7 +32,9 @@ const RightBox = styled(Box)({
 const LogoBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
+  marginLeft: "28%",
 });
+
 
 const LogoImage = styled("img")({
   width: "230px",
