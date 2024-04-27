@@ -22,10 +22,10 @@ function App() {
   return (
     <>
       <Appbar />
-      <CarouselSection />
+      <CarouselSection item={"item1"} data={"data1"} />
       <HowItWorks />
       <AboutUnique />
-
+      <CarouselSection item={"item2"} data={"data2"} />
       <SupportSection />
 
       <MadeInSriLanka />

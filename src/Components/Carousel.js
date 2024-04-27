@@ -3,12 +3,14 @@ import CarouselData from '../Data/CarouselData'
 import CarouselItem from './CarouselItem'
 import { Box, styled } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
+import CarouselData2 from '../Data/CarouselData2'
+import CarouselItem2 from './CarouselItem2'
 
 const CarouselContainer = styled(Box)({
     marginTop:"5%"
 });
 
-function CarouselSection() {
+function CarouselSection(props) {
   return (
     <>
     <CarouselContainer>
@@ -24,10 +26,10 @@ function CarouselSection() {
         }}
         navButtonsAlwaysVisible = {true}
         >
-
-            {
+            {props.item === "item1"?
                 CarouselData.map((item,i) => <CarouselItem key={i} item={item} />)
-            }
+            : CarouselData2.map((item,i) => <CarouselItem2 key={i} item={item} />)}
+            
         </Carousel>
     </CarouselContainer>
     </>
