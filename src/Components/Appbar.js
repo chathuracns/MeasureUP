@@ -43,50 +43,42 @@ function Appbar() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
-  const LogoBox = styled(Box)({
-  });
+
+  const LogoBox = styled(Box)({});
 
   const ButtonGroup = styled(Box)({
     display: { xs: "none", md: "flex" },
     flexDirection: "row",
     marginLeft: "10%",
-    
-
   });
 
   const RightButtonBox = styled(Box)({
     marginLeft: "auto",
-
   });
 
   const ResposiveLogoBox = styled(Box)({
     marginLeft: "20%",
-
   });
 
-  const ResposiveMenuBox = styled(Box)({
-
-  });
+  const ResposiveMenuBox = styled(Box)({});
 
   const ButtonMiddle = styled(Button)({
     fontFamily: "Poppins",
-    color : "#000000",
+    color: "#000000",
   });
 
   const IntrestedButton = styled(Button)({
-    borderRadius: "10%"
+    borderRadius: "10%",
   });
 
   const ButtonItalic = styled(ButtonMiddle)({
     fontFamily: "Poppins",
     fontStyle: "italic",
-    textTransform: "none"
+    textTransform: "none",
   });
-  
 
-  const LogoImage = styled('img')({
-    width : "230px",
+  const LogoImage = styled("img")({
+    width: "230px",
   });
 
   return (
@@ -104,7 +96,7 @@ function Appbar() {
             />
           </LogoBox>
 
-          <ResposiveMenuBox sx={{display: { xs: "flex", md: "none" } }}>
+          <ResposiveMenuBox sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -133,62 +125,50 @@ function Appbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={() => scrollToSection("team")}>
+              <MenuItem onClick={() => scrollToSection("about")}>
+                ABOUT
+              </MenuItem>
+              <MenuItem onClick={() => scrollToSection("learn")}>
                 HOW IT WORKS
               </MenuItem>
-              <MenuItem onClick={() => scrollToSection("support")}>
+              <MenuItem onClick={() => scrollToSection("srilanka")}>
                 #MadeInSriLanka
-              </MenuItem>
-              <MenuItem onClick={() => scrollToSection("support")}>
-                ABOUT
               </MenuItem>
               <MenuItem onClick={() => scrollToSection("support")}>
                 INTRESTED
               </MenuItem>
-              {/* {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))} */}
             </Menu>
           </ResposiveMenuBox>
           <ResposiveLogoBox sx={{ display: { xs: "flex", md: "none" } }}>
-            <LogoImage
-              src={logo}
-              alt="Logo"
-              className="logo_middle"
-            />
+            <LogoImage src={logo} alt="Logo" className="logo_middle" />
           </ResposiveLogoBox>
-          <ButtonGroup sx={{display: {xs: "none", md: "flex"}}}>
+          <ButtonGroup sx={{ display: { xs: "none", md: "flex" } }}>
             <ButtonMiddle
               variant="text"
               size="large"
-              onClick={() => scrollToSection("team")}
+              onClick={() => scrollToSection("about")}
+            >
+              ABOUT
+            </ButtonMiddle>
+            <ButtonMiddle
+              variant="text"
+              size="large"
+              onClick={() => scrollToSection("learn")}
             >
               HOW IT WORKS
             </ButtonMiddle>
             <ButtonItalic
               variant="text"
               size="large"
-              onClick={() => scrollToSection("support")}
+              onClick={() => scrollToSection("srilanka")}
             >
               #MadeInSriLanka
             </ButtonItalic>
-            <ButtonMiddle
-              variant="text"
-              size="large"
-              onClick={() => scrollToSection("team")}
-            >
-              ABOUT
-            </ButtonMiddle>
           </ButtonGroup>
-          <RightButtonBox sx={{display: {xs: "none", md: "flex"}}}>
-              <IntrestedButton
-                variant="contained"
-                size="large"
-              >
-                Intrested
-              </IntrestedButton>
+          <RightButtonBox sx={{ display: { xs: "none", md: "flex" } }}>
+            <IntrestedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
+              Intrested
+            </IntrestedButton>
           </RightButtonBox>
         </Toolbar>
       </Container>

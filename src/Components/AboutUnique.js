@@ -41,12 +41,13 @@ const DescriptionText = styled(Typography)({
 const ImageAbout = styled('img')({
     height: "auto",
     width: "75%",
+    marginTop: "10%",
 });
 
 function AboutUnique() {
   return (
     <>
-      <ContainerBox>
+      <ContainerBox id="about">
         <LeftBox>
           <TextBox>
             <HeadingText>What makes MeasureUP so unique ?</HeadingText>

@@ -22,6 +22,7 @@ const RightBox = styled(Box)({
   width: "65%",
   display: "flex",
   flexDirection: "column",
+  
 });
 
 const QuoteTextBox = styled(Box)({
@@ -40,6 +41,7 @@ const StackHowTo = styled(Box)({
 
 const FirstStack = styled(StackHowTo)({
   height: "33%",
+  marginTop: "8%", 
 });
 
 const SecondStack = styled(StackHowTo)({
@@ -48,6 +50,7 @@ const SecondStack = styled(StackHowTo)({
 
 const ThirdStack = styled(StackHowTo)({
   height: "33%",
+  marginTop: "3%",
 });
 
 const ImageBox = styled(Box)({
@@ -82,7 +85,7 @@ const HowToDescription = styled(Typography)({
 function HowItWorks() {
   return (
     <>
-      <ContainerBox>
+      <ContainerBox id="learn">
         <LeftBox>
           <QuoteTextBox>
             <QuoteText>

@@ -101,10 +101,17 @@ const OutlinedButton = styled(Button)({
   border: "1px solid #1578FF",
 });
 
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 function CarouselItem2(props) {
   return (
     <>
-      <MainContainer>
+      <MainContainer id="carousel2">
         <LeftContainer>
           <ContainerImage
             src={mapImages(props.item.id)}
@@ -128,10 +135,10 @@ function CarouselItem2(props) {
             )}
 
             <ButtonBox>
-              <ContainedButton variant="contained" size="large">
+              <ContainedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
                 Intrested
               </ContainedButton>
-              <OutlinedButton variant="outlined" size="large">
+              <OutlinedButton variant="outlined" size="large" onClick={() => scrollToSection("learn")}>
                 Learn More
               </OutlinedButton>
             </ButtonBox>

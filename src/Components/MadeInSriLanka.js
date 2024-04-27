@@ -54,7 +54,7 @@ const DescriptionText = styled(Typography)({
 function MadeInSriLanka() {
   return (
     <>
-      <ContainerBox>
+      <ContainerBox id="srilanka">
         <LeftBox>
           <ImageBox>
             <SriLankaImage src={sriLankanImage} alt="Sri Lankan Flag" />
