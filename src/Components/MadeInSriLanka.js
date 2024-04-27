@@ -5,6 +5,7 @@ import sriLankanImage from "./../Resources/Sri_Lanka_Flag_Lion.png";
 const ContainerBox = styled(Box)({
   display: "flex",
   height: "70vh",
+  marginTop: "3%",
 });
 
 const LeftBox = styled(Box)({
@@ -28,7 +29,8 @@ const ImageBox = styled(Box)({
 });
 
 const SriLankaImage = styled("img")({
-  width: "450px",
+  width: "400px",
+  height: "auto",
 });
 
 const TextBox = styled(Box)({

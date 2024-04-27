@@ -22,11 +22,7 @@ function App() {
   return (
     <>
       <Appbar />
-      <CarouselSection/>
-      {/* <IntroSection /> */}
-
-      {/* <TeamSection /> */}
-
+      <CarouselSection />
       <HowItWorks />
       <AboutUnique />
 
@@ -35,7 +31,6 @@ function App() {
       <MadeInSriLanka />
 
       <Footer />
-      {/* <h1>Hi this is measure up</h1> */}
     </>
   );
 }

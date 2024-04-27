@@ -34,6 +34,7 @@ const SupportSection = () => {
 
   const ContentBox = styled(Box)({
     fontFamily: "Poppins",
+    marginTop: "3%",
   });
 
   const Text = styled(Typography)({
@@ -101,7 +102,7 @@ const SupportSection = () => {
                   required
                   id="name"
                   size="small"
-                  sx={{ width: "95%", mt: "0px" }}
+                  sx={{ width: "70%", mt: "0px" }}
                   name="name"
                   type="text"
                   defaultValue=""
@@ -120,7 +121,7 @@ const SupportSection = () => {
                   required
                   id="email"
                   size="small"
-                  sx={{ width: "95%", mt: "0px" }}
+                  sx={{ width: "70%", mt: "0px" }}
                   name="email"
                   type="email"
                   defaultValue=""
@@ -154,9 +155,10 @@ const SupportSection = () => {
         <PictureSection sx={{ ml: "10%" }}>
           <Box
             sx={{
-              background: `url('${SupportImage}') #ffffff 50% / cover no-repeat`,
-              height: "550px", // Set a height for the background to be visible
-              width: "600px",
+              background: `url('${SupportImage}') #ffffff 54% / cover no-repeat`,
+              width: "525px",
+              height: "550px",
+              
             }}
           ></Box>
         </PictureSection>

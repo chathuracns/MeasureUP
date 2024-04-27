@@ -8,6 +8,7 @@ const ContainerBox = styled(Box)({
   display: "flex",
   flexFirection: "row",
   height: "85vh",
+  marginTop: "2%",
 });
 
 const LeftBox = styled(Box)({

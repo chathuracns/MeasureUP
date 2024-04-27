@@ -15,6 +15,28 @@ function mapImages(id) {
     }
 }
 
+function mapHeight(id) {
+    switch (id) {
+        case 1:
+            return "438px";
+        case 2:
+            return "450px";
+        case 3:
+            return "500px";    
+    }
+}
+
+function mapWidth(id) {
+    switch (id) {
+        case 1:
+            return "700px";
+        case 2:
+            return "405px";
+        case 3:
+            return "550px";    
+    }
+}
+
 const MainContainer = styled(Box)({
     backgroundColor: "#9FC7FF",
     width: "100%",
@@ -32,6 +54,8 @@ const LeftContainer = styled(Box)({
 
 const RightContainer = styled(Box)({
     width: "70%",
+    display: "flex",
+    justifyContent: "center",
 });
 
 const TextContainer = styled(Box)({
@@ -56,9 +80,9 @@ const ContentText = styled(Typography)({
 });
 
 const ContainerImage = styled('img')({
-    width: "700px",
+    width: "50%",
     marginLeft: "10%",
-    height: "70vh",
+    marginTop: "2%"
 });
 
 const ContainedButton = styled(Button)({
@@ -98,6 +122,7 @@ function CarouselItem(props) {
             <RightContainer>
                 <ContainerImage
                     src= {mapImages(props.item.id)}
+                    sx={{height: "auto", width: mapWidth(props.item.id)}}
                 />
             </RightContainer>    
         </MainContainer>

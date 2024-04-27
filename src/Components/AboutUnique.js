@@ -5,6 +5,7 @@ import imageAbout from "./../Resources/MeasureUP png_4.jpg";
 const ContainerBox = styled(Box)({
   display: "flex",
   height: "85vh",
+  marginTop: "3%",
 });
 
 const LeftBox = styled(Box)({
@@ -38,7 +39,8 @@ const DescriptionText = styled(Typography)({
 });
 
 const ImageAbout = styled('img')({
-    height: "90vh",
+    height: "auto",
+    width: "75%",
 });
 
 function AboutUnique() {
