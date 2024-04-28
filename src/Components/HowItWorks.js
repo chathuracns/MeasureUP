@@ -27,11 +27,13 @@ const RightBox = styled(Box)({
 
 const QuoteTextBox = styled(Box)({
   width: "38%",
+  marginTop: "15%",
 });
 
 const QuoteText = styled(Typography)({
   fontFamily: "Poppins",
   fontSize: "20px",
+  
 });
 
 const StackHowTo = styled(Box)({

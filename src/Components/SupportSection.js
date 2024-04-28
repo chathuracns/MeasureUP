@@ -80,7 +80,7 @@ const SupportSection = () => {
         <ToastContainer />
         <ContentSection sx={{ width: "60%", ml: "10%", mt: "10%" }}>
           <Text variant="h5" sx={{ fontWeight: 650 }} gutterBottom>
-            Interested in trying Measure Up?
+            Interested in trying MeasureUP?
           </Text>
           <Text variant="body1" sx={{ fontWeight: 300 }} gutterBottom>
             If you'd like to show support for MeasureUP, please share your
@@ -158,6 +158,7 @@ const SupportSection = () => {
               background: `url('${SupportImage}') #ffffff 54% / cover no-repeat`,
               width: "525px",
               height: "550px",
+              marginTop: "8%"
               
             }}
           ></Box>
