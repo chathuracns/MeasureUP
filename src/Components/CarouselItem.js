@@ -119,7 +119,7 @@ function CarouselItem(props) {
                         <ContainedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
                             Intrested
                         </ContainedButton>
-                        <OutlinedButton variant="outlined" size="large" onClicke={() => scrollToSection("learn")}>
+                        <OutlinedButton variant="outlined" size="large" onClick={() => scrollToSection("learn")}>
                             Learn More
                         </OutlinedButton>
                     </ButtonBox>
