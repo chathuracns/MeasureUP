@@ -18,11 +18,11 @@ function mapImages(id) {
 function mapWidth(id) {
   switch (id) {
     case 1:
-      return "600px";
+      return "65%";
     case 2:
-      return "600px";
+      return "70%";
     case 3:
-      return "400px";
+      return "65%";
   }
 }
 
@@ -115,7 +115,7 @@ function CarouselItem2(props) {
         <LeftContainer>
           <ContainerImage
             src={mapImages(props.item.id)}
-            sx={{ width: "auto", height: mapHeight(props.item.id) }}
+            sx={{ width: mapWidth(props.item.id), height: "auto" }}
           />
         </LeftContainer>
         <RightContainer>

@@ -29,11 +29,11 @@ function mapHeight(id) {
 function mapWidth(id) {
     switch (id) {
         case 1:
-            return "700px";
+            return "70%";
         case 2:
-            return "405px";
+            return "45%";
         case 3:
-            return "550px";    
+            return "60%";    
     }
 }
 
@@ -45,23 +45,39 @@ const MainContainer = styled(Box)({
     flexDirection: "row",
 });
 
-const LeftContainer = styled(Box)({
+const LeftContainer = styled(Box)(({theme}) => ({
     width: "35%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-});
+    [theme.breakpoints.down('sm')]: {
+        width: "100%"
+    },
+}));
 
-const RightContainer = styled(Box)({
-    width: "70%",
+const RightContainer = styled(Box)(({ theme }) => ({
+    width: "80%",
     display: "flex",
     justifyContent: "center",
-});
+    [theme.breakpoints.down('sm')]: {
+        display: "none",
+    },
+    [theme.breakpoints.down('md')]: {
+        
+    },
+}));
 
-const TextContainer = styled(Box)({
+
+const TextContainer = styled(Box)(({theme}) => ({
     width: "80%",
     marginLeft: "33%",
-});
+    [theme.breakpoints.down('sm')]: {
+        marginLeft: "10%"
+    },
+    [theme.breakpoints.down('md')]: {
+        width: "100%"
+    },
+}));
 
 const ButtonBox = styled(Box)({
     marginTop: "10%",
@@ -79,15 +95,20 @@ const ContentText = styled(Typography)({
     fontSize: "14px"
 });
 
-const ContainerImage = styled('img')({
-    width: "50%",
+const ContainerImage = styled('img')(({theme}) => ({
     marginLeft: "10%",
-    marginTop: "2%"
-});
+    marginTop: "2%",
+    [theme.breakpoints.down('md')]: {
+        marginTop: "5%",
+        maxWidth: "105%",
+    },
+}));
 
-const ContainedButton = styled(Button)({
-    margin: "2%"
-});
+
+const ContainedButton = styled(Button)(({theme})=> ({
+    margin: "2%",
+    
+}));
 
 const OutlinedButton = styled(Button)({
     backgroundColor: "#ffffff",
@@ -129,7 +150,7 @@ function CarouselItem(props) {
             <RightContainer>
                 <ContainerImage
                     src= {mapImages(props.item.id)}
-                    sx={{height: "auto", width: mapWidth(props.item.id)}}
+                    sx={{height: "auto", width: {md: "80%" ,lg: mapWidth(props.item.id)}}}
                 />
             </RightContainer>    
         </MainContainer>
