@@ -18,11 +18,11 @@ function mapImages(id) {
 function mapWidth(id) {
   switch (id) {
     case 1:
-      return "65%";
+      return "60%";
     case 2:
-      return "70%";
-    case 3:
       return "65%";
+    case 3:
+      return "60%";
   }
 }
 

@@ -49,7 +49,7 @@ function Appbar() {
   const ButtonGroup = styled(Box)({
     display: { xs: "none", md: "flex" },
     flexDirection: "row",
-    marginLeft: "10%",
+    marginLeft: "7%",
   });
 
   const RightButtonBox = styled(Box)({
@@ -57,7 +57,7 @@ function Appbar() {
   });
 
   const ResposiveLogoBox = styled(Box)({
-    marginLeft: "20%",
+    marginLeft: "8%",
   });
 
   const ResposiveMenuBox = styled(Box)({});
@@ -65,6 +65,8 @@ function Appbar() {
   const ButtonMiddle = styled(Button)({
     fontFamily: "Poppins",
     color: "#000000",
+    width: "15vw",
+    margin: "1%"
   });
 
   const IntrestedButton = styled(Button)({
@@ -75,16 +77,26 @@ function Appbar() {
     fontFamily: "Poppins",
     fontStyle: "italic",
     textTransform: "none",
+
   });
 
-  const LogoImage = styled("img")({
-    width: "230px",
-  });
+  const LogoImage = styled("img")(({theme}) => ({
+    width: "15vw",
+    [theme.breakpoints.down('lg')]: {
+     width: "25vw"
+  },
+  [theme.breakpoints.down('md')]: {
+    width: "30vw"
+ },
+ [theme.breakpoints.down('sm')]: {
+  width: "50vw"
+},
+  }));
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#ffff" }} id="appbar">
+    <AppBar position="fixed" sx={{ backgroundColor: "#ffff", height: "12vh"}}  id="appbar">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters >
           <LogoBox sx={{ display: { xs: "none", md: "flex" } }}>
             <LogoImage
               src={logo}
@@ -142,7 +154,7 @@ function Appbar() {
           <ResposiveLogoBox sx={{ display: { xs: "flex", md: "none" } }}>
             <LogoImage src={logo} alt="Logo" className="logo_middle" />
           </ResposiveLogoBox>
-          <ButtonGroup sx={{ display: { xs: "none", md: "flex" } }}>
+          <ButtonGroup sx={{ display: { xs: "none", md: "flex" },}}>
             <ButtonMiddle
               variant="text"
               size="large"
@@ -165,8 +177,18 @@ function Appbar() {
               #MadeInSriLanka
             </ButtonItalic>
           </ButtonGroup>
-          <RightButtonBox sx={{ display: { xs: "none", md: "flex" } }}>
-            <IntrestedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
+          <RightButtonBox
+            sx={{
+              display: { xs: "none", md: "flex" },
+              marginLeft: {md: "10%", lg: "15%"},
+              marginRight: {md: "0%", lg: "0%"},
+            }}
+          >
+            <IntrestedButton
+              variant="contained"
+              size="large"
+              onClick={() => scrollToSection("support")}
+            >
               Intrested
             </IntrestedButton>
           </RightButtonBox>
