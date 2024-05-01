@@ -4,31 +4,47 @@ import image1 from "./../Resources/image 1.png";
 import image2 from "./../Resources/image 2.png";
 import image3 from "./../Resources/image 3.png";
 
-const ContainerBox = styled(Box)({
+const ContainerBox = styled(Box)(({theme}) => ({
   display: "flex",
   flexFirection: "row",
   height: "85vh",
   marginTop: "2%",
-});
+  [theme.breakpoints.down('lg')]: {
+    flexDirection: "column",
+    marginTop: "0%",
+    height: "150vh"
+},
+}));
 
-const LeftBox = styled(Box)({
+const LeftBox = styled(Box)(({theme})=> ({
   width: "35%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-});
+  [theme.breakpoints.down('lg')]: {
+    width: "100%"
+ },
+}));
 
-const RightBox = styled(Box)({
+const RightBox = styled(Box)(({theme})=> ({
   width: "65%",
   display: "flex",
   flexDirection: "column",
-  
-});
+  [theme.breakpoints.down('lg')]: {
+    width: "100%",
+    justifyContent: "center",
+    marginLeft: "3%"
+ },
+}));
 
-const QuoteTextBox = styled(Box)({
+const QuoteTextBox = styled(Box)(({theme})=> ({
   width: "38%",
   marginTop: "15%",
-});
+  [theme.breakpoints.down('lg')]: {
+    width: "90%",
+    marginTop: "3%"
+ },
+}));
 
 const QuoteText = styled(Typography)({
   fontFamily: "Poppins",
@@ -62,12 +78,15 @@ const ImageBox = styled(Box)({
   justifyContent: "center",
 });
 
-const TextBox = styled(Box)({
+const TextBox = styled(Box)(({theme})=> ({
   width: "40%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-});
+  [theme.breakpoints.down('lg')]: {
+    marginLeft: "4%"
+ },
+}));
 
 const ImageSetup = styled("img")({
   height: "220px",
