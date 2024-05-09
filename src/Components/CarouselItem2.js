@@ -45,46 +45,84 @@ const MainContainer = styled(Box)({
   flexDirection: "row",
 });
 
-const RightContainer = styled(Box)({
+const RightContainer = styled(Box)(({ theme }) => ({
   width: "45%",
   display: "flex",
   justifyContent: "left",
   alignItems: "center",
-});
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    margin: "10%",
+  },
+  [theme.breakpoints.down("md")]: {
+    
+  },
+}));
 
-const LeftContainer = styled(Box)({
+const LeftContainer = styled(Box)(({ theme }) => ({
   width: "55%",
   display: "flex",
   justifyContent: "left",
-});
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "60%"
+  },
+}));
 
-const TextContainer = styled(Box)({
+const TextContainer = styled(Box)(({ theme }) => ({
   width: "70%",
   marginLeft: "15%",
-});
+  [theme.breakpoints.down("sm")]: {
+    
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+    marginLeft: "0%",
+  },
+}));
 
 const ButtonBox = styled(Box)({
   marginTop: "10%",
   display: "flex",
 });
 
-const HeadingText = styled(Typography)({
+const HeadingText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "32px",
   fontWeight: "650",
-});
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "5%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "0%",
+  },
+}));
 
-const ContentText = styled(Typography)({
+const ContentText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "14px",
   width: "80%",
-});
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "5%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "0%",
+  },
+}));
 
-const ContainerImage = styled("img")({
+const ContainerImage = styled("img")(({theme}) => ({
   width: "50%",
   marginTop: "3%",
   marginLeft: "18%",
-});
+  [theme.breakpoints.down('md')]: {
+    marginTop: "10%",
+    width: "90%",
+    marginLeft: "7%",
+    
+},
+}));
 
 const br = styled("br")({
   display: "none",
@@ -102,11 +140,11 @@ const OutlinedButton = styled(Button)({
 });
 
 const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 function CarouselItem2(props) {
   return (
@@ -125,7 +163,7 @@ function CarouselItem2(props) {
             </HeadingText>
             {props.item.id === 2 ? (
               <ContentText variant="body1" gutterBottom>
-                to your backpack as its truly portable with its small sizee{" "}
+                to your backpack as its truly portable with its small size{" "}
                 <br /> Height device L X B X H <br /> Weight device L X B X H
               </ContentText>
             ) : (
@@ -135,10 +173,18 @@ function CarouselItem2(props) {
             )}
 
             <ButtonBox>
-              <ContainedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
+              <ContainedButton
+                variant="contained"
+                size="large"
+                onClick={() => scrollToSection("support")}
+              >
                 Intrested
               </ContainedButton>
-              <OutlinedButton variant="outlined" size="large" onClick={() => scrollToSection("learn")}>
+              <OutlinedButton
+                variant="outlined"
+                size="large"
+                onClick={() => scrollToSection("learn")}
+              >
                 Learn More
               </OutlinedButton>
             </ButtonBox>

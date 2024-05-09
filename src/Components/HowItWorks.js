@@ -8,7 +8,7 @@ const ContainerBox = styled(Box)(({theme}) => ({
   display: "flex",
   flexFirection: "row",
   height: "85vh",
-  marginTop: "2%",
+  marginTop: "0%",
   [theme.breakpoints.down('lg')]: {
     flexDirection: "column",
     marginTop: "0%",
@@ -88,9 +88,12 @@ const TextBox = styled(Box)(({theme})=> ({
  },
 }));
 
-const ImageSetup = styled("img")({
-  height: "220px",
-});
+const ImageSetup = styled("img")(({theme})=> ({
+  height: "35vh",
+  [theme.breakpoints.down('md')]: {
+    height: "30vh",
+ },
+}));
 
 const HowToTopic = styled(Typography)({
   fontFamily: "Poppins",
