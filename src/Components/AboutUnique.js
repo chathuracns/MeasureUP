@@ -12,7 +12,7 @@ const ContainerBox = styled(Box)(({theme})=> ({
   
 },
 [theme.breakpoints.down('sm')]: {
-  height: "110vh",
+  height: "85vh",
   
 },
 }));

@@ -12,8 +12,9 @@ const ContainerBox = styled(Box)(({theme}) => ({
   [theme.breakpoints.down('lg')]: {
     flexDirection: "column",
     marginTop: "0%",
-    height: "150vh"
+    height: "97vh"
 },
+
 }));
 
 const LeftBox = styled(Box)(({theme})=> ({
@@ -91,8 +92,11 @@ const TextBox = styled(Box)(({theme})=> ({
 const ImageSetup = styled("img")(({theme})=> ({
   height: "35vh",
   [theme.breakpoints.down('md')]: {
-    height: "30vh",
+    height: "25vh",
  },
+ [theme.breakpoints.down('sm')]: {
+  height: "20vh",
+},
 }));
 
 const HowToTopic = styled(Typography)({

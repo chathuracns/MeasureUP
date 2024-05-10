@@ -25,8 +25,8 @@ const ContainerBox = styled(Box)(({ theme }) => ({
 const LeftBox = styled(Box)(({ theme }) => ({
   width: "33%",
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    marginLeft: "25%"
+    width: "73%",
+    marginLeft: "5%"
 },
 }));
 
@@ -40,8 +40,8 @@ const MidBox = styled(Box)(({ theme }) => ({
     marginLeft: "15%",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "100%",
-    marginLeft: "70%",
+    width: "40%",
+    marginLeft: "10%",
     marginBottom: "0%",
   }
 }));

@@ -46,6 +46,7 @@ function Appbar() {
 
   const LogoBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("lg")]: {},
+    
   }));
 
   const ButtonGroup = styled(Box)(({ theme }) => ({
@@ -61,9 +62,9 @@ function Appbar() {
     margin: "0 1% 0 10%"
   });
 
-  const ResposiveLogoBox = styled(Box)({
+  const ResposiveLogoBox = styled(Box)(({ theme }) => ({
     marginLeft: "8%",
-  });
+  }));
 
   const ResposiveMenuBox = styled(Box)({});
 
@@ -90,7 +91,7 @@ function Appbar() {
       width: "80%",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
+      width: "70%",
     },
   }));
 
