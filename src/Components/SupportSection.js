@@ -38,7 +38,7 @@ const SupportSection = () => {
     },
     [theme.breakpoints.down("md")]: {
       width: "100%",
-      margin: "10%",
+      margin: "10% 10% 5% 10%",
     },
    
   }));

@@ -2,41 +2,78 @@ import { Box, Typography, styled } from "@mui/material";
 import React from "react";
 import sriLankanImage from "./../Resources/Sri_Lanka_Flag_Lion.png";
 
-const ContainerBox = styled(Box)({
+const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
   height: "70vh",
   marginTop: "3%",
-});
+  [theme.breakpoints.down("md")]: {
+    height: "110vh",
+    flexDirection: "column-reverse",
+    marginTop: "0%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  [theme.breakpoints.down("sm")]: {
+    height: "100vh",
+  },
+}));
 
-const LeftBox = styled(Box)({
-  width: "65%",
+const LeftBox = styled(Box)(({ theme }) => ({
+  width: "60%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-});
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+}));
 
-const RightBox = styled(Box)({
-  width: "35%",
+const RightBox = styled(Box)(({ theme }) => ({
+  width: "40%",
   display: "flex",
-  flexDirection: "column",
   justifyContent: "center",
-  
-});
+  [theme.breakpoints.down("lg")]: {
+    width: "50%",
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+}));
 
-const ImageBox = styled(Box)({
-  width: "70%",
-  marginLeft: "0%"
-});
+const ImageBox = styled(Box)(({ theme }) => ({
+  width: "90%",
+  marginLeft: "0%",
+  [theme.breakpoints.down("md")]: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "20%",
+  },
+}));
 
-const SriLankaImage = styled("img")({
-  width: "400px",
+const SriLankaImage = styled("img")(({ theme }) => ({
+  width: "65%",
   height: "auto",
-});
+  [theme.breakpoints.down("lg")]: {
+    width: "75%",
+  },
+}));
 
-const TextBox = styled(Box)({
+const TextBox = styled(Box)(({ theme }) => ({
   width: "70%",
-  
-});
+  justifyContent: "center",
+  alignitems: "center",
+  marginTop: "10%",
+  [theme.breakpoints.down("lg")]: {
+    marginTop: "5%",
+  },
+  [theme.breakpoints.down("md")]: {
+    marginTop: "0%",
+    width: "90%",
+    justifyContent: "center",
+    alignitems: "center",
+    marginBottom: "2%",
+  },
+}));
 
 const HeadingText = styled(Typography)({
   fontFamily: "Poppins",
@@ -48,7 +85,6 @@ const HeadingText = styled(Typography)({
 const DescriptionText = styled(Typography)({
   fontFamily: "Poppins",
   fontSize: "18px",
-  
 });
 
 function MadeInSriLanka() {
