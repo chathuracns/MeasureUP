@@ -5,29 +5,59 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-scroll";
 
-const ContainerBox = styled(Box)({
+const ContainerBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#1578FF",
   height: "20vh",
   display: "flex",
   flexDirection: "row",
   color: "white",
-});
+  [theme.breakpoints.down("lg")]: {
+      
+  },
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    height: "40vh",
+    justifyContent: "center",
+    alignItems: "center",
+},
+}));
 
-const LeftBox = styled(Box)({
+const LeftBox = styled(Box)(({ theme }) => ({
   width: "33%",
-});
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    marginLeft: "25%"
+},
+}));
 
-const MidBox = styled(Box)({
+const MidBox = styled(Box)(({ theme }) => ({
   width: "55%",
   display: "flex",
   alignItems: "center",
-});
+  marginLeft: "20%",
+  [theme.breakpoints.down("lg")]: {
+    width: "38%",
+    marginLeft: "15%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    marginLeft: "70%",
+    marginBottom: "0%",
+  }
+}));
 
-const RightBox = styled(Box)({
+const RightBox = styled(Box)(({ theme }) => ({
   width: "12%",
   display: "flex",
   justifyContent: "center",
-});
+  [theme.breakpoints.down("lg")]: {
+    width: "20%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    marginLeft: "-15%"
+  }
+}));
 
 const LogoBox = styled(Box)({
   display: "flex",
@@ -36,16 +66,19 @@ const LogoBox = styled(Box)({
 });
 
 const LogoImage = styled("img")({
-  width: "230px",
+  width: "70%",
 });
 
-const LogoText = styled(Typography)({
+const LogoText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "30px",
   fontStyle: "italic",
   marginLeft: "2%",
   marginTop: "-2%",
-});
+  [theme.breakpoints.down("lg")]: {
+    marginTop: "-5%",
+  }
+}));
 
 const NavButtonBox = styled(Box)({
   display: "flex",

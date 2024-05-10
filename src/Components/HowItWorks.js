@@ -31,7 +31,7 @@ const RightBox = styled(Box)(({theme})=> ({
   display: "flex",
   flexDirection: "column",
   [theme.breakpoints.down('lg')]: {
-    width: "100%",
+    width: "96%",
     justifyContent: "center",
     marginLeft: "3%"
  },

@@ -63,7 +63,7 @@ const RightContainer = styled(Box)(({ theme }) => ({
         display: "none",
     },
     [theme.breakpoints.down('md')]: {
-        
+        width: "65%"
     },
 }));
 
@@ -100,7 +100,8 @@ const ContainerImage = styled('img')(({theme}) => ({
     marginTop: "2%",
     [theme.breakpoints.down('md')]: {
         marginTop: "5%",
-        maxWidth: "105%",
+        marginLeft: "5%",
+        maxWidth: "90%",
     },
 }));
 
