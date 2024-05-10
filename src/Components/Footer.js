@@ -16,7 +16,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
-    height: "40vh",
+    height: "32vh",
     justifyContent: "center",
     alignItems: "center",
 },
@@ -41,7 +41,7 @@ const MidBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     width: "40%",
-    marginLeft: "10%",
+    marginLeft: "0%",
     marginBottom: "0%",
   }
 }));
@@ -55,7 +55,7 @@ const RightBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    marginLeft: "-15%"
+    marginLeft: "-18%"
   }
 }));
 
@@ -77,6 +77,9 @@ const LogoText = styled(Typography)(({ theme }) => ({
   marginTop: "-2%",
   [theme.breakpoints.down("lg")]: {
     marginTop: "-5%",
+  },
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "-5%",
   }
 }));
 

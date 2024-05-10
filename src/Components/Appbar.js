@@ -103,6 +103,10 @@ function Appbar() {
       
     },
     [theme.breakpoints.down("md")]: {
+      height: "12vh",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "8vh",
     },
   }));
 

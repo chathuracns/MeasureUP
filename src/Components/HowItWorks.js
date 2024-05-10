@@ -12,7 +12,10 @@ const ContainerBox = styled(Box)(({theme}) => ({
   [theme.breakpoints.down('lg')]: {
     flexDirection: "column",
     marginTop: "0%",
-    height: "97vh"
+    height: "120vh"
+},
+[theme.breakpoints.down('md')]: {
+  height: "97vh"
 },
 
 }));
