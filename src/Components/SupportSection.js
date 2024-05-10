@@ -19,17 +19,46 @@ import SupportImage from "./../Resources/MeasureUP png_5.jpg";
 
 const SupportSection = () => {
   const PictureSection = styled(Box)(({ theme }) => ({
+    width: "55%",
+    marginTop: "3%",
     [theme.breakpoints.down("md")]: {
       display: "none",
+    },
+    [theme.breakpoints.down("lg")]: {
+      width: "70%",
     },
   }));
 
   const ContentSection = styled(Box)(({ theme }) => ({
-    [theme.breakpoints.down("md")]: {
-      marginLeft: "20%",
-      marginBottom: "10%",
-      width: "70%",
+    width: "45%",
+    marginLeft: "10%",
+    marginTop: "5%",
+    [theme.breakpoints.down("lg")]: {
+      width: "50%",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: "10%",
+    },
+   
+  }));
+
+  const Fields = styled(TextField)(({ theme }) => ({
+    [theme.breakpoints.down("lg")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
+  }));
+
+  const ImageRight = styled("img")(({ theme }) => ({
+    marginLeft: "10%",
+    [theme.breakpoints.down("lg")]: {
+      width: "80%",
+    },
+
+    width: "70%",
   }));
 
   const ContentBox = styled(Box)({
@@ -78,7 +107,7 @@ const SupportSection = () => {
     <>
       <ContentBox sx={{ display: "flex", flexDirection: "row" }} id="support">
         <ToastContainer />
-        <ContentSection sx={{ width: "60%", ml: "10%", mt: "10%" }}>
+        <ContentSection >
           <Text variant="h5" sx={{ fontWeight: 650 }} gutterBottom>
             Interested in trying MeasureUP?
           </Text>
@@ -98,7 +127,7 @@ const SupportSection = () => {
                 >
                   Name:
                 </Text>
-                <TextField
+                <Fields
                   required
                   id="name"
                   size="small"
@@ -117,7 +146,7 @@ const SupportSection = () => {
                 >
                   Email:
                 </Text>
-                <TextField
+                <Fields
                   required
                   id="email"
                   size="small"
@@ -137,7 +166,7 @@ const SupportSection = () => {
                   display: "none",
                 }}
               />
-              <Box sx={{ mt: "5%" }}>
+              <Box sx={{ mt: "5%", ml: "35%" }}>
                 <LoadingButton
                   loading={loading}
                   variant="contained"
@@ -152,16 +181,8 @@ const SupportSection = () => {
           </Box>
         </ContentSection>
 
-        <PictureSection sx={{ ml: "10%" }}>
-          <Box
-            sx={{
-              background: `url('${SupportImage}') #ffffff 54% / cover no-repeat`,
-              width: "525px",
-              height: "550px",
-              marginTop: "8%"
-              
-            }}
-          ></Box>
+        <PictureSection>
+          <ImageRight src={SupportImage} />
         </PictureSection>
       </ContentBox>
     </>
