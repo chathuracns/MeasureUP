@@ -8,14 +8,14 @@ const CarouselData2 = [
   },
   {
     id: 2,
-    title: `Pack UP`,
+    title: `Take UP`,
     description: 'to your backpack as its truly portable with its small size <br/> Height device   L X B X H <br/> Weight device  L X B X H',
     image: require("./../Resources/MeasureUP png_2.jpg").default,
   },
   {
     id: 3,
-    title: `Dress it UP`,
-    description: `with your favorite  colour and your logo`,
+    title: `Lineup`,
+    description: `with your favorite shade.`,
     image: require("./../Resources/MeasureUP png_3.png").default,
   },
 ];

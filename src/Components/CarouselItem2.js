@@ -1,8 +1,8 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import React from "react";
-import background1 from "./../Resources/MeasureUP png_5.jpg";
-import background2 from "./../Resources/MeasureUP png_6.jpg";
-import background3 from "./../Resources/MeasureUP png_7.jpg";
+import background1 from "./../Resources/Picture7.png";
+import background2 from "./../Resources/Picture4.png";
+import background3 from "./../Resources/Picture5.png";
 
 function mapImages(id) {
   switch (id) {
@@ -18,11 +18,11 @@ function mapImages(id) {
 function mapWidth(id) {
   switch (id) {
     case 1:
-      return "60%";
+      return "70%";
     case 2:
-      return "65%";
+      return "80%";
     case 3:
-      return "60%";
+      return "95%";
   }
 }
 
@@ -163,8 +163,9 @@ function CarouselItem2(props) {
             </HeadingText>
             {props.item.id === 2 ? (
               <ContentText variant="body1" gutterBottom>
-                to your backpack as its truly portable with its small size{" "}
-                <br /> Height device L X B X H <br /> Weight device L X B X H
+                any where as its truly portable with its small size.{" "}
+                <br /> Height measuring Unit&emsp;&ensp;19cm X 3.5cm X 7cm <br />
+                Weight measuring Unit&emsp;&nbsp;28cm X 28cm X 1cm
               </ContentText>
             ) : (
               <ContentText variant="body1" gutterBottom>
