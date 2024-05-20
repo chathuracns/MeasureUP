@@ -39,14 +39,15 @@ function Appbar() {
   //   };
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    if (section) {
+    if (section && sectionId == "carousel1") {
+      window.scrollTo({top: 0,left: 0,behavior: "smooth"});
+    } else if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const LogoBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("lg")]: {},
-    
   }));
 
   const ButtonGroup = styled(Box)(({ theme }) => ({
@@ -55,11 +56,11 @@ function Appbar() {
     marginLeft: "-32%",
     [theme.breakpoints.down("lg")]: {
       marginLeft: "-50%",
-    }
+    },
   }));
 
   const RightButtonBox = styled(Box)({
-    margin: "0 1% 0 10%"
+    margin: "0 1% 0 10%",
   });
 
   const ResposiveLogoBox = styled(Box)(({ theme }) => ({
@@ -87,6 +88,7 @@ function Appbar() {
 
   const LogoImage = styled("img")(({ theme }) => ({
     width: "45%",
+    cursor: "pointer",
     [theme.breakpoints.down("md")]: {
       width: "80%",
     },
@@ -100,7 +102,6 @@ function Appbar() {
     height: "12vh",
     [theme.breakpoints.down("lg")]: {
       height: "12vh",
-      
     },
     [theme.breakpoints.down("md")]: {
       height: "12vh",
@@ -111,20 +112,20 @@ function Appbar() {
   }));
 
   return (
-    <MainAppBar
-      position="fixed"
-      id="appbar"
-    >
+    <MainAppBar position="fixed" id="appbar">
       <Toolbar disableGutters sx={{ width: "100%" }}>
         <LogoBox sx={{ display: { xs: "none", md: "flex" } }}>
-          <LogoImage
-            src={logo}
-            alt="Logo"
-            className="logo_front"
-            style={{
-              marginRight: "0%",
-            }}
-          />
+          <a onClick={() => scrollToSection("carousel1")}>
+            <LogoImage
+              src={logo}
+              alt="Logo"
+              className="logo_front"
+              style={{
+                marginRight: "0%",
+                
+              }}
+            />
+          </a>
         </LogoBox>
 
         <ResposiveMenuBox sx={{ display: { xs: "flex", md: "none" } }}>
@@ -156,7 +157,7 @@ function Appbar() {
               display: { xs: "block", md: "none" },
             }}
           >
-            <MenuItem onClick={() => scrollToSection("about")}>ABOUT</MenuItem>
+            <MenuItem onClick={() => scrollToSection("about")}>WHY SO UNIQUE</MenuItem>
             <MenuItem onClick={() => scrollToSection("learn")}>
               HOW IT WORKS
             </MenuItem>
@@ -169,16 +170,18 @@ function Appbar() {
           </Menu>
         </ResposiveMenuBox>
         <ResposiveLogoBox sx={{ display: { xs: "flex", md: "none" } }}>
-          <LogoImage src={logo} alt="Logo" className="logo_middle" />
+          <a onClick={() => scrollToSection("carousel1")}>
+            <LogoImage src={logo} alt="Logo" className="logo_middle" />
+          </a>
         </ResposiveLogoBox>
         <ButtonGroup sx={{ display: { xs: "none", md: "flex" } }}>
           <ButtonMiddle
             variant="text"
             size="large"
-            sx={{ml: "10%"}}
+            sx={{ ml: "10%" }}
             onClick={() => scrollToSection("about")}
           >
-            ABOUT
+            WHY SO UNIQUE
           </ButtonMiddle>
           <ButtonMiddle
             variant="text"
@@ -197,7 +200,7 @@ function Appbar() {
         </ButtonGroup>
         <RightButtonBox
           sx={{
-            display: { xs: "none", md: "flex" },  
+            display: { xs: "none", md: "flex" },
           }}
         >
           <IntrestedButton

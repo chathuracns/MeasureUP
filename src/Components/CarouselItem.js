@@ -1,8 +1,8 @@
 import { Box, Button, Typography, styled } from '@mui/material';
 import React from 'react'
-import background1 from "./../Resources/MeasureUP png_1.jpg";
+import background1 from "./../Resources/Picture1.png";
 import background2 from "./../Resources/MeasureUP png_2.jpg";
-import background3 from "./../Resources/MeasureUP png_3.png";
+import background3 from "./../Resources/picture3.png";
 
 function mapImages(id) {
     switch (id) {
@@ -29,7 +29,7 @@ function mapHeight(id) {
 function mapWidth(id) {
     switch (id) {
         case 1:
-            return "70%";
+            return "100%";
         case 2:
             return "45%";
         case 3:
@@ -37,6 +37,16 @@ function mapWidth(id) {
     }
 }
 
+function mapMarginTop(id) {
+    switch (id) {
+        case 1:
+            return "10%";
+        case 2:
+            return "2%";
+        case 3:
+            return "2%";    
+    }
+}
 const MainContainer = styled(Box)({
     backgroundColor: "#9FC7FF",
     width: "100%",
@@ -97,11 +107,10 @@ const ContentText = styled(Typography)({
 
 const ContainerImage = styled('img')(({theme}) => ({
     marginLeft: "10%",
-    marginTop: "2%",
     [theme.breakpoints.down('md')]: {
-        marginTop: "5%",
+        marginTop: "10%",
         marginLeft: "5%",
-        maxWidth: "90%",
+        maxWidth: "85%",
     },
 }));
 
@@ -134,9 +143,19 @@ function CarouselItem(props) {
                     <HeadingText variant="h3" gutterBottom>
                     {props.item.title}
                     </HeadingText>
-                    <ContentText variant="body1" gutterBottom>
+                    {props.item.id === 2 ? (
+                       <ContentText variant="body1" gutterBottom>
+                       beyond traditional height measurement 
+                       methods that require sssistance. 
+                       With <strong> MeasureUP </strong>, the process 
+                       is automated and hassle free, saving your time.
+                       </ContentText> 
+                    ): (
+                        <ContentText variant="body1" gutterBottom>
                     {props.item.description}
-                    </ContentText>
+                    </ContentText>                            
+                    )}
+                    
                     <ButtonBox>
                         <ContainedButton variant="contained" size="large" onClick={() => scrollToSection("support")}>
                             Intrested
@@ -151,7 +170,7 @@ function CarouselItem(props) {
             <RightContainer>
                 <ContainerImage
                     src= {mapImages(props.item.id)}
-                    sx={{height: "auto", width: {md: "80%" ,lg: mapWidth(props.item.id)}}}
+                    sx={{height: "auto", width: {md: "80%" ,lg: mapWidth(props.item.id)}, marginTop: mapMarginTop(props.item.id)}}
                 />
             </RightContainer>    
         </MainContainer>

@@ -9,7 +9,6 @@ import HowItWorks from "./Components/HowItWorks";
 import IntroSection from "./Components/IntroSection";
 import MadeInSriLanka from "./Components/MadeInSriLanka";
 import SupportSection from "./Components/SupportSection";
-import TeamSection from "./Components/TeamSection";
 
 function App() {
   // const scrollToSection = (sectionId) => {
