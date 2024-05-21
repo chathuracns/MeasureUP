@@ -7,7 +7,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
   height: "90vh",
   marginTop: "3%",
-  scrollMarginTop: "40px",
+  scrollMarginTop: "45px",
   [theme.breakpoints.down("lg")]: {
     height: "90vh",
   },
@@ -118,8 +118,8 @@ const LinkedInIconBox = styled(Box)(({ theme }) => ({
 }));
 
 const ProfileAvatar = styled(Avatar)(({ theme }) => ({
-  width: 100,
-  height: 100,
+  width: 80,
+  height: 80,
 }));
 
 function MadeInSriLanka() {
@@ -150,7 +150,7 @@ function MadeInSriLanka() {
             >
               <ProfileAvatar alt="Chathura Weerasinghe" src={profilePic} />
             </a>
-            <DescriptionTextName sx={{ mt: "8%", ml: "2%" }}>
+            <DescriptionTextName sx={{ mt: "4%", ml: "2%" }}>
               Chathura Weerasinghe
             </DescriptionTextName>
           </LinkedInIconBox>

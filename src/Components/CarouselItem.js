@@ -29,7 +29,7 @@ function mapHeight(id) {
 function mapWidth(id) {
     switch (id) {
         case 1:
-            return "100%";
+            return "80%";
         case 2:
             return "45%";
         case 3:

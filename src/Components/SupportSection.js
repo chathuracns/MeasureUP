@@ -105,7 +105,7 @@ const SupportSection = () => {
 
   return (
     <>
-      <ContentBox sx={{ display: "flex", flexDirection: "row" }} id="support">
+      <ContentBox sx={{ display: "flex", flexDirection: "row", scrollMarginTop: "20px", }} id="support">
         <ToastContainer />
         <ContentSection >
           <Text variant="h5" sx={{ fontWeight: 650 }} gutterBottom>

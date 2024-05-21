@@ -18,11 +18,11 @@ function mapImages(id) {
 function mapWidth(id) {
   switch (id) {
     case 1:
-      return "70%";
+      return "65%";
     case 2:
-      return "80%";
+      return "90%";
     case 3:
-      return "95%";
+      return "100%";
   }
 }
 
@@ -118,7 +118,7 @@ const ContainerImage = styled("img")(({theme}) => ({
   marginLeft: "18%",
   [theme.breakpoints.down('md')]: {
     marginTop: "10%",
-    width: "90%",
+    width: "95%",
     marginLeft: "7%",
     
 },
