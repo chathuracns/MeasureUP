@@ -26,6 +26,17 @@ function mapWidth(id) {
   }
 }
 
+function mapMarginLeft(id) {
+  switch (id) {
+    case 1:
+      return "25%";
+    case 2:
+      return "18%";
+    case 3:
+      return "10%";
+  }
+}
+
 function mapHeight(id) {
   switch (id) {
     case 1:
@@ -38,7 +49,7 @@ function mapHeight(id) {
 }
 
 const MainContainer = styled(Box)({
-  backgroundColor: "#9FC7FF",
+  backgroundColor: "#d2e3fc",
   width: "100%",
   height: "82vh",
   display: "flex",
@@ -153,7 +164,7 @@ function CarouselItem2(props) {
         <LeftContainer>
           <ContainerImage
             src={mapImages(props.item.id)}
-            sx={{ width: mapWidth(props.item.id), height: "auto" }}
+            sx={{ width: mapWidth(props.item.id), marginLeft: mapMarginLeft(props.item.id), height: "auto" }}
           />
         </LeftContainer>
         <RightContainer>

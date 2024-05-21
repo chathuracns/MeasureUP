@@ -48,7 +48,7 @@ function mapMarginTop(id) {
     }
 }
 const MainContainer = styled(Box)({
-    backgroundColor: "#9FC7FF",
+    backgroundColor: "#d2e3fc",
     width: "100%",
     height: "82vh",
     display:"flex",

@@ -143,6 +143,9 @@ function MadeInSriLanka() {
               University of Moratuwa."
             </DescriptionText>
           </TextBox>
+          <DescriptionText sx={{mt: "5%"}}>
+            <b>Contact: </b>
+          </DescriptionText>
           <LinkedInIconBox>
             <a
               target="_blank"

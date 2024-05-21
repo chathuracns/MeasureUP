@@ -40,7 +40,7 @@ function Appbar() {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section && sectionId == "carousel1") {
-      window.scrollTo({top: 0,left: 0,behavior: "smooth"});
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     } else if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -122,7 +122,6 @@ function Appbar() {
               className="logo_front"
               style={{
                 marginRight: "0%",
-                
               }}
             />
           </a>
@@ -157,9 +156,11 @@ function Appbar() {
               display: { xs: "block", md: "none" },
             }}
           >
-            <MenuItem onClick={() => scrollToSection("about")}>WHY SO UNIQUE</MenuItem>
             <MenuItem onClick={() => scrollToSection("learn")}>
               HOW IT WORKS
+            </MenuItem>
+            <MenuItem onClick={() => scrollToSection("about")}>
+              WHY SO UNIQUE
             </MenuItem>
             <MenuItem onClick={() => scrollToSection("srilanka")}>
               #MadeInSriLanka
@@ -179,16 +180,16 @@ function Appbar() {
             variant="text"
             size="large"
             sx={{ ml: "10%" }}
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection("learn")}
           >
-            WHY SO UNIQUE
+            HOW IT WORKS
           </ButtonMiddle>
           <ButtonMiddle
             variant="text"
             size="large"
-            onClick={() => scrollToSection("learn")}
+            onClick={() => scrollToSection("about")}
           >
-            HOW IT WORKS
+            WHY SO UNIQUE
           </ButtonMiddle>
           <ButtonItalic
             variant="text"
