@@ -86,10 +86,10 @@ const SupportSection = () => {
       console.log("In sending mail");
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         (result) => {
-          toast("Email sent successfully!");
+          
           console.log(result.text);
           console.log("Send successful before toast");
-          toast("Email sent successfully!");
+          alert("Thank you for your interest in trying MeasureUp. Our team will contact you soon!");
           setLoading(false);
         },
         (error) => {
@@ -99,8 +99,8 @@ const SupportSection = () => {
     } catch (error) {
       console.error("Error sending email:", error);
     }
-    toast("Email sent successfully!");
   };
+
 
   return (
     <>
