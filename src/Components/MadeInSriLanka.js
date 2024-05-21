@@ -1,25 +1,26 @@
-import { Box, Typography, styled } from "@mui/material";
+import { Avatar, Box, Typography, styled } from "@mui/material";
 import React from "react";
 import sriLankanImage from "./../Resources/Sri_Lanka_Flag_Lion.png";
+import profilePic from "./../Resources/chathura.jpg";
 
 const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
-  height: "70vh",
+  height: "85vh",
   marginTop: "3%",
   [theme.breakpoints.down("md")]: {
-    height: "110vh",
+    height: "115vh",
     flexDirection: "column-reverse",
     marginTop: "0%",
     justifyContent: "center",
     alignItems: "center",
   },
   [theme.breakpoints.down("sm")]: {
-    height: "100vh",
+    height: "105vh",
   },
 }));
 
 const LeftBox = styled(Box)(({ theme }) => ({
-  width: "60%",
+  width: "65%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -29,20 +30,22 @@ const LeftBox = styled(Box)(({ theme }) => ({
 }));
 
 const RightBox = styled(Box)(({ theme }) => ({
-  width: "40%",
+  width: "35%",
   display: "flex",
-  justifyContent: "center",
+  flexDirection: "column",
+
   [theme.breakpoints.down("lg")]: {
     width: "50%",
   },
   [theme.breakpoints.down("md")]: {
     width: "100%",
+    
   },
 }));
 
 const ImageBox = styled(Box)(({ theme }) => ({
-  width: "90%",
-  marginLeft: "0%",
+  width: "120%",
+  marginLeft: "5%",
   [theme.breakpoints.down("md")]: {
     justifyContent: "center",
     alignItems: "center",
@@ -60,32 +63,60 @@ const SriLankaImage = styled("img")(({ theme }) => ({
 
 const TextBox = styled(Box)(({ theme }) => ({
   width: "70%",
+  display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignitems: "center",
-  marginTop: "10%",
+  marginTop: "3%",
   [theme.breakpoints.down("lg")]: {
     marginTop: "5%",
   },
   [theme.breakpoints.down("md")]: {
     marginTop: "0%",
-    width: "90%",
-    justifyContent: "center",
-    alignitems: "center",
+    width: "95%",
     marginBottom: "2%",
   },
 }));
 
-const HeadingText = styled(Typography)({
+const HeadingText = styled(Typography)(({ theme } ) => ({
   fontFamily: "Poppins",
   fontSize: "32px",
   fontWeight: "650",
   fontStyle: "italic",
-});
+  display: "flex",
+  [theme.breakpoints.down("md")]: {
+    justifyContent: "center",
+  },
+  
+}));
 
-const DescriptionText = styled(Typography)({
+const DescriptionText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "18px",
-});
+  display: "flex",
+  [theme.breakpoints.down("md")]: {
+    justifyContent: "center",
+    marginLeft: "5%",
+  },
+}));
+const DescriptionTextName = styled(DescriptionText)(({ theme }) => ({
+  fontSize: "20px",
+}));
+
+const LinkedInIconBox = styled(Box)(({ theme }) => ({
+  marginTop: "2%",
+  display: "flex",
+  flexDirection: "row",
+  [theme.breakpoints.down("md")]: {
+    justifyContent:  "center",
+    marginBottom: "5%",
+  },
+}));
+
+const ProfileAvatar = styled(Avatar)(({ theme }) => ({
+  width: 100,
+  height: 100,
+}));
 
 function MadeInSriLanka() {
   return (
@@ -108,6 +139,17 @@ function MadeInSriLanka() {
               University of Moratuwa."
             </DescriptionText>
           </TextBox>
+          <LinkedInIconBox>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/chathura-nirmal-weerasinghe-9a08bb213?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bh1TEz3yMTY6mHyYaUm%2B5Lw%3D%3D"
+            >
+              <ProfileAvatar alt="Chathura Weerasinghe" src={profilePic} />
+            </a>
+            <DescriptionTextName sx={{ mt: "8%", ml: "2%" }}>
+              Chathura Weerasinghe
+            </DescriptionTextName>
+          </LinkedInIconBox>
         </RightBox>
       </ContainerBox>
     </>
