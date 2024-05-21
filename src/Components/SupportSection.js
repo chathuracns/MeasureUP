@@ -40,7 +40,6 @@ const SupportSection = () => {
       width: "100%",
       margin: "10% 10% 5% 10%",
     },
-   
   }));
 
   const Fields = styled(TextField)(({ theme }) => ({
@@ -75,10 +74,10 @@ const SupportSection = () => {
 
   const form = useRef();
 
-  const serviceId = "service_p2llj2x";
-  const templateId = "template_48kndik";
-  const publicKey = "HwlELZzZrVSeQmZsd";
-  const toEmail = "bsamw996@gmail.com";
+  const serviceId = "service_s3dj6dx";
+  const templateId = "template_b6kg0x9";
+  const publicKey = "qjVRyG0WJeGWJwh6g";
+  const toEmail = "chathuranirmalweerasinghe@gmail.com";
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -105,9 +104,12 @@ const SupportSection = () => {
 
   return (
     <>
-      <ContentBox sx={{ display: "flex", flexDirection: "row", scrollMarginTop: "20px", }} id="support">
+      <ContentBox
+        sx={{ display: "flex", flexDirection: "row", scrollMarginTop: "20px" }}
+        id="support"
+      >
         <ToastContainer />
-        <ContentSection >
+        <ContentSection>
           <Text variant="h5" sx={{ fontWeight: 650 }} gutterBottom>
             Interested in trying MeasureUP?
           </Text>
