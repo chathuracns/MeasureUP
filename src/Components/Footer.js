@@ -4,6 +4,7 @@ import logo from "./../Resources/MeasureUP Logo final white.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-scroll";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const ContainerBox = styled(Box)(({ theme }) => ({
   backgroundColor: "#1578FF",
@@ -11,23 +12,21 @@ const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   color: "white",
-  [theme.breakpoints.down("lg")]: {
-      
-  },
+  [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     height: "32vh",
     justifyContent: "center",
     alignItems: "center",
-},
+  },
 }));
 
 const LeftBox = styled(Box)(({ theme }) => ({
   width: "33%",
   [theme.breakpoints.down("sm")]: {
     width: "73%",
-    marginLeft: "5%"
-},
+    marginLeft: "5%",
+  },
 }));
 
 const MidBox = styled(Box)(({ theme }) => ({
@@ -43,7 +42,7 @@ const MidBox = styled(Box)(({ theme }) => ({
     width: "40%",
     marginLeft: "0%",
     marginBottom: "0%",
-  }
+  },
 }));
 
 const RightBox = styled(Box)(({ theme }) => ({
@@ -55,8 +54,8 @@ const RightBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    marginLeft: "-18%"
-  }
+    marginLeft: "-18%",
+  },
 }));
 
 const LogoBox = styled(Box)({
@@ -80,14 +79,13 @@ const LogoText = styled(Typography)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     marginLeft: "-5%",
-  }
+  },
 }));
 
 const NavButtonBox = styled(Box)({
   display: "flex",
   flexDirection: "column",
   marginTop: "2%",
-  
 });
 
 const NavButton = styled(Button)({
@@ -152,11 +150,10 @@ function Footer() {
           </NavButtonBox>
         </MidBox>
         <RightBox>
-          <SocialMediaButton size="small">
-            <FacebookIcon fontSize="large" />
-          </SocialMediaButton>
-          <SocialMediaButton size="small">
-            <LinkedInIcon fontSize="large" />
+          <SocialMediaButton size="large">
+            <a target="_blank" href="https://www.youtube.com/@Team_MeasureUP">
+              <YouTubeIcon fontSize="large" />
+            </a>
           </SocialMediaButton>
         </RightBox>
       </ContainerBox>

@@ -5,8 +5,11 @@ import profilePic from "./../Resources/chathura.jpg";
 
 const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
-  height: "85vh",
+  height: "90vh",
   marginTop: "3%",
+  [theme.breakpoints.down("lg")]: {
+    height: "90vh",
+  },
   [theme.breakpoints.down("md")]: {
     height: "115vh",
     flexDirection: "column-reverse",
@@ -142,7 +145,7 @@ function MadeInSriLanka() {
           <LinkedInIconBox>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/chathura-nirmal-weerasinghe-9a08bb213?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bh1TEz3yMTY6mHyYaUm%2B5Lw%3D%3D"
+              href="https://www.linkedin.com/in/chathura-weerasinghe-9a08bb213/"
             >
               <ProfileAvatar alt="Chathura Weerasinghe" src={profilePic} />
             </a>
