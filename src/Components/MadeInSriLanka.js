@@ -7,6 +7,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
   height: "90vh",
   marginTop: "3%",
+  scrollMarginTop: "40px",
   [theme.breakpoints.down("lg")]: {
     height: "90vh",
   },
