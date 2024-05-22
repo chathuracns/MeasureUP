@@ -60,7 +60,7 @@ const LeftContainer = styled(Box)(({theme}) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
         width: "100%"
     },
 }));
@@ -69,22 +69,18 @@ const RightContainer = styled(Box)(({ theme }) => ({
     width: "80%",
     display: "flex",
     justifyContent: "center",
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
         display: "none",
     },
-    [theme.breakpoints.down('md')]: {
-        width: "65%"
-    },
+    
 }));
 
 
 const TextContainer = styled(Box)(({theme}) => ({
     width: "80%",
     marginLeft: "33%",
-    [theme.breakpoints.down('sm')]: {
-        marginLeft: "10%"
-    },
     [theme.breakpoints.down('md')]: {
+        marginLeft: "10%",
         width: "100%"
     },
 }));
@@ -110,7 +106,6 @@ const ContainerImage = styled('img')(({theme}) => ({
     [theme.breakpoints.down('md')]: {
         marginTop: "10%",
         marginLeft: "5%",
-        maxWidth: "85%",
     },
 }));
 
@@ -170,7 +165,7 @@ function CarouselItem(props) {
             <RightContainer>
                 <ContainerImage
                     src= {mapImages(props.item.id)}
-                    sx={{height: "auto", width: {md: "80%" ,lg: mapWidth(props.item.id)}, marginTop: mapMarginTop(props.item.id)}}
+                    sx={{height: "auto", width: "auto", marginTop: mapMarginTop(props.item.id)}}
                 />
             </RightContainer>    
         </MainContainer>

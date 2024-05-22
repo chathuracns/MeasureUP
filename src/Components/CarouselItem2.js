@@ -22,7 +22,7 @@ function mapWidth(id) {
     case 2:
       return "90%";
     case 3:
-      return "100%";
+      return "120%";
   }
 }
 
@@ -59,14 +59,12 @@ const MainContainer = styled(Box)({
 const RightContainer = styled(Box)(({ theme }) => ({
   width: "45%",
   display: "flex",
-  justifyContent: "left",
+  justifyContent: "center",
   alignItems: "center",
-  [theme.breakpoints.down("sm")]: {
+  marginLeft: "5%",
+  [theme.breakpoints.down("md")]: {
     width: "100%",
     margin: "10%",
-  },
-  [theme.breakpoints.down("md")]: {
-    
   },
 }));
 
@@ -74,23 +72,18 @@ const LeftContainer = styled(Box)(({ theme }) => ({
   width: "55%",
   display: "flex",
   justifyContent: "left",
-  [theme.breakpoints.down("sm")]: {
-    display: "none",
-  },
   [theme.breakpoints.down("md")]: {
-    width: "60%"
+    display: "none",
   },
 }));
 
 const TextContainer = styled(Box)(({ theme }) => ({
   width: "70%",
   marginLeft: "15%",
-  [theme.breakpoints.down("sm")]: {
-    
-  },
+  
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    marginLeft: "0%",
+    marginLeft: "00%",
   },
 }));
 
@@ -104,7 +97,7 @@ const HeadingText = styled(Typography)(({ theme }) => ({
   fontSize: "32px",
   fontWeight: "650",
   [theme.breakpoints.down("md")]: {
-    marginLeft: "5%",
+    marginLeft: "0%",
   },
   [theme.breakpoints.down("sm")]: {
     marginLeft: "0%",
@@ -115,8 +108,9 @@ const ContentText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "14px",
   width: "80%",
+  
   [theme.breakpoints.down("md")]: {
-    marginLeft: "5%",
+    marginLeft: "0%",
   },
   [theme.breakpoints.down("sm")]: {
     marginLeft: "0%",
@@ -124,7 +118,6 @@ const ContentText = styled(Typography)(({ theme }) => ({
 }));
 
 const ContainerImage = styled("img")(({theme}) => ({
-  width: "50%",
   marginTop: "3%",
   marginLeft: "18%",
   [theme.breakpoints.down('md')]: {
