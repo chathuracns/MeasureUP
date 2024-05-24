@@ -59,7 +59,8 @@ const ImageBox = styled(Box)(({ theme }) => ({
 }));
 
 const SriLankaImage = styled("img")(({ theme }) => ({
-  width: "65%",
+  width: "60%",
+  marginLeft: "11%",
   height: "auto",
   [theme.breakpoints.down("lg")]: {
     width: "75%",

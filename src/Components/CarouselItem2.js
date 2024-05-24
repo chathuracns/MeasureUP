@@ -3,15 +3,18 @@ import React from "react";
 import background1 from "./../Resources/Picture7.png";
 import background2 from "./../Resources/Picture4.png";
 import background3 from "./../Resources/Picture5.png";
+import b1 from "./../Resources/7.png";
+import b2 from "./../Resources/4.png";
+import b3 from "./../Resources/5.png";
 
 function mapImages(id) {
   switch (id) {
     case 1:
-      return background1;
+      return b1;
     case 2:
-      return background2;
+      return b2;
     case 3:
-      return background3;
+      return b3;
   }
 }
 
@@ -29,11 +32,11 @@ function mapWidth(id) {
 function mapMarginLeft(id) {
   switch (id) {
     case 1:
-      return "25%";
+      return "-8%";
     case 2:
-      return "18%";
+      return "0.5%";
     case 3:
-      return "10%";
+      return "0.5%";
   }
 }
 
@@ -44,7 +47,7 @@ function mapHeight(id) {
     case 2:
       return "400px";
     case 3:
-      return "400px";
+      return "100%";
   }
 }
 
@@ -74,6 +77,9 @@ const LeftContainer = styled(Box)(({ theme }) => ({
   justifyContent: "left",
   [theme.breakpoints.down("md")]: {
     display: "none",
+  },
+  [theme.breakpoints.down("lg")]: {
+    
   },
 }));
 
@@ -120,6 +126,10 @@ const ContentText = styled(Typography)(({ theme }) => ({
 const ContainerImage = styled("img")(({theme}) => ({
   marginTop: "3%",
   marginLeft: "18%",
+  [theme.breakpoints.down('lg')]: {
+    marginLeft: "-15%", 
+    
+},
   [theme.breakpoints.down('md')]: {
     marginTop: "10%",
     width: "95%",
@@ -157,7 +167,7 @@ function CarouselItem2(props) {
         <LeftContainer>
           <ContainerImage
             src={mapImages(props.item.id)}
-            sx={{ width: mapWidth(props.item.id), marginLeft: mapMarginLeft(props.item.id), height: "auto" }}
+            sx={{ height: "auto", width: "auto", marginLeft: mapMarginLeft(props.item.id) }}
           />
         </LeftContainer>
         <RightContainer>
