@@ -1,6 +1,8 @@
 import { Box, styled } from '@mui/material';
 import React from 'react'
 import Group from "./../Resources/group Photo.png";
+import Group1 from "./../Resources/group photo 1.png";
+
 
 const ContainerBox = styled(Box)(({ theme }) => ({
     display: "flex",
@@ -10,7 +12,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
         
     },
     [theme.breakpoints.down("sm")]: {
-        height: "40vh",
+        height: "45vh",
     },
     
 }));
@@ -19,22 +21,23 @@ const ImageBox = styled(Box)(({theme}) => ({
 }));
 
 const GroupImage = styled("img") (({theme}) => ({
-    width: "50%",
-    marginLeft: "25%",
+    width: "45%",
+    marginLeft: "27.5%",
     marginTop: "1%",
     [theme.breakpoints.down("lg")]: {
-        width: "63%",
-        marginLeft: "20%",
+        width: "50%",
+        marginLeft: "25%",
+        marginTop: "2%",
     },
     [theme.breakpoints.down("md")]: {
-        marginTop: "7%",
-        width: "83%",
-        marginLeft: "10%",
+        marginTop: "10%",
+        width: "65%",
+        marginLeft: "17.5%",
     },
     [theme.breakpoints.down("sm")]: {
-        marginTop: "0%",
-        marginLeft: "0%",
-        width: "100%",
+        marginTop: "2%",
+        marginLeft: "5%",
+        width: "90%",
     },
 }));
 
@@ -43,7 +46,7 @@ function TeamSection() {
     <>
         <ContainerBox id="team">
             <ImageBox>
-                <GroupImage src={Group} alt='Group Photo' />
+                <GroupImage src={Group1} alt='Group Photo' />
             </ImageBox>
         </ContainerBox>
     </>

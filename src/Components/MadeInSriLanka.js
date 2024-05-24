@@ -2,6 +2,7 @@ import { Avatar, Box, Typography, styled } from "@mui/material";
 import React from "react";
 import sriLankanImage from "./../Resources/Sri_Lanka_Flag_Lion.png";
 import profilePic from "./../Resources/chathura.jpg";
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const ContainerBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -118,8 +119,8 @@ const LinkedInIconBox = styled(Box)(({ theme }) => ({
 }));
 
 const ProfileAvatar = styled(Avatar)(({ theme }) => ({
-  width: 80,
-  height: 80,
+  width: 50,
+  height: 50,
 }));
 
 function MadeInSriLanka() {
@@ -144,18 +145,20 @@ function MadeInSriLanka() {
             </DescriptionText>
           </TextBox>
           <DescriptionText sx={{mt: "5%"}}>
-            <b>Contact: </b>
+            <b>For More Details: </b>
           </DescriptionText>
           <LinkedInIconBox>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/chathura-weerasinghe-9a08bb213/"
+              href="https://web.facebook.com/profile.php?id=61560118376138"
             >
-              <ProfileAvatar alt="Chathura Weerasinghe" src={profilePic} />
+              <ProfileAvatar sx={{backgroundColor: "#4267B2"}}  >
+                <FacebookIcon fontSize="large"/>
+              </ProfileAvatar>
             </a>
-            <DescriptionTextName sx={{ mt: "4%", ml: "2%" }}>
+            {/* <DescriptionTextName sx={{ mt: "4%", ml: "2%" }}>
               Chathura Weerasinghe
-            </DescriptionTextName>
+            </DescriptionTextName> */}
           </LinkedInIconBox>
         </RightBox>
       </ContainerBox>
