@@ -159,7 +159,7 @@ function HowItWorks() {
             <TextBox>
               <HowToTopic><Box color="#026CFF" display="inline">1.</Box> SetUP</HowToTopic>
               <HowToDescription>
-                Simply setup the unit by hanging the Height device on a wall and
+                Simply setup the unit by hanging the Height measuring device on a wall and
                 keeping the Weight device underneath It
               </HowToDescription>
             </TextBox>
@@ -168,7 +168,7 @@ function HowItWorks() {
             <TextBox>
               <HowToTopic><Box color="#026CFF" display="inline">2.</Box> StepUP</HowToTopic>
               <HowToDescription>
-                Step up on to the weight device and stand straight
+                Step up on to the weight measuring device and stand straight
               </HowToDescription>
             </TextBox>
             <ImageBox sx={{marginTop: "-2%"}}>

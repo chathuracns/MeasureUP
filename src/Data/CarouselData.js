@@ -13,7 +13,7 @@ const CarouselData = [
     id: 2,
     title: `Boost UP`,
     description:
-      "beyond traditional height measurement methods that require sssistance. With <strong> MeasureUP </strong>, the process is automated and hassle free, saving your time.",
+      "beyond traditional height measurement methods that require assistance. With <strong> MeasureUP </strong>, the process is automated and hassle free, saving your time.",
     image: require("./../Resources/MeasureUP png_2.jpg").default,
   },
   {
