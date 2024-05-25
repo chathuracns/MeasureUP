@@ -67,7 +67,9 @@ const RightContainer = styled(Box)(({ theme }) => ({
   marginLeft: "5%",
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    margin: "10%",
+    position: "absolute",
+    top: "5%",
+
   },
 }));
 
@@ -76,11 +78,11 @@ const LeftContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "left",
   [theme.breakpoints.down("md")]: {
-    display: "none",
+    width: "100%",
+    position: "absolute",
+    opacity: "0.5",
   },
-  [theme.breakpoints.down("lg")]: {
-    
-  },
+  
 }));
 
 const TextContainer = styled(Box)(({ theme }) => ({
@@ -131,11 +133,15 @@ const ContainerImage = styled("img")(({theme}) => ({
     
 },
   [theme.breakpoints.down('md')]: {
-    marginTop: "10%",
-    width: "95%",
-    marginLeft: "7%",
-    
-},
+    marginTop: "5%",
+    width: "100%",
+    marginLeft: "0%",
+    },
+  [theme.breakpoints.down("sm")]: {
+    marginTop: "25vh",
+    width: "150%",
+    marginLeft: "-25%"
+  }
 }));
 
 const br = styled("br")({

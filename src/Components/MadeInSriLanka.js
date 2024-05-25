@@ -123,7 +123,7 @@ const DescriptionText = styled(Typography)(({ theme }) => ({
     justifyContent: "center",
     marginLeft: "0%",
     alignItems: "center",
-    width: "95%",
+    width: "90%",
   },
 }));
 const DescriptionTextName = styled(DescriptionText)(({ theme }) => ({

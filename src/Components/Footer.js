@@ -15,7 +15,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
-    height: "32vh",
+    height: "33vh",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -39,7 +39,8 @@ const MidBox = styled(Box)(({ theme }) => ({
     marginLeft: "15%",
   },
   [theme.breakpoints.down("sm")]: {
-    width: "40%",
+    width: "100%",
+    justifyContent: "center",
     marginLeft: "0%",
     marginBottom: "0%",
   },
@@ -54,7 +55,6 @@ const RightBox = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    marginLeft: "-18%",
   },
 }));
 
@@ -64,9 +64,14 @@ const LogoBox = styled(Box)({
   marginLeft: "5%",
 });
 
-const LogoImage = styled("img")({
+const LogoImage = styled("img")(({ theme }) => ({
   width: "70%",
-});
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    justifyContent: "center",
+    width: "90%",
+  },
+}));
 
 const LogoText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
@@ -80,15 +85,23 @@ const LogoText = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     marginLeft: "-5%",
   },
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    marginLeft: "0%",
+    marginTop: "-7%",
+  },
 }));
 
-const NavButtonBox = styled(Box)({
+const NavButtonBox = styled(Box)(({ theme} ) => ({
   display: "flex",
   flexDirection: "column",
   marginTop: "2%",
-});
+  [theme.breakpoints.down("sm")]: {
+    marginTop: "0%",
+  },
+}));
 
-const NavButton = styled(Button)({
+const NavButton = styled(Button)(({ theme }) => ({
   width: "20%",
   "&:hover": {
     background: "none",
@@ -101,7 +114,11 @@ const NavButton = styled(Button)({
   minWidth: "150px",
   display: "flex",
   justifyContent: "left",
-});
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    justifyContent: "center",
+  },
+}));
 
 const SocialMediaButton = styled(Button)({
   color: "white",
@@ -150,7 +167,7 @@ function Footer() {
           </NavButtonBox>
         </MidBox>
         <RightBox>
-          <SocialMediaButton size="large">
+          <SocialMediaButton size="medium">
             <a target="_blank" href="https://www.youtube.com/@Team_MeasureUP">
               <YouTubeIcon fontSize="large" />
             </a>

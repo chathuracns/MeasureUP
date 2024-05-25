@@ -12,7 +12,7 @@ const ContainerBox = styled(Box)(({ theme }) => ({
     flexDirection: "column",
   },
   [theme.breakpoints.down("sm")]: {
-    height: "106vh",
+    height: "108vh",
     justifyContent: "space-around",
   },
 }));
