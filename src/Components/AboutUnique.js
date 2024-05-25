@@ -12,7 +12,8 @@ const ContainerBox = styled(Box)(({ theme }) => ({
     flexDirection: "column",
   },
   [theme.breakpoints.down("sm")]: {
-    height: "100vh",
+    height: "106vh",
+    justifyContent: "space-around",
   },
 }));
 
@@ -23,6 +24,9 @@ const LeftBox = styled(Box)(({ theme }) => ({
   alignItems: "center",
   [theme.breakpoints.down("md")]: {
     width: "100%",
+  },
+  [theme.breakpoints.down("sm")]:{
+    height: "100%",
   },
 }));
 
@@ -40,6 +44,7 @@ const TextBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     width: "100%",
     marginLeft: "5%",
+    height: "100%",
     justifyContent: "center",
   },
 }));
@@ -52,14 +57,21 @@ const VideoBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     paddingTop: "5%",
   },
+  [theme.breakpoints.down("sm")]: {
+    paddingTop: "0%",
+  },
 }));
 
-const HeadingText = styled(Typography)({
+const HeadingText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
   fontSize: "32px",
   fontWeight: "650",
   marginBottom: "10%",
-});
+  [theme.breakpoints.down("sm")]: {
+    marginBottom: "0%",
+  },
+
+}));
 
 const DescriptionText = styled(Typography)(({ theme }) => ({
   fontFamily: "Poppins",
@@ -67,6 +79,9 @@ const DescriptionText = styled(Typography)(({ theme }) => ({
   width: "90%",
   [theme.breakpoints.down("md")]: {
     width: "90%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
   },
 }));
 

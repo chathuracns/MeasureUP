@@ -17,6 +17,11 @@ const ContainerBox = styled(Box)(({theme}) => ({
 [theme.breakpoints.down('md')]: {
   height: "97vh"
 },
+[theme.breakpoints.down('sm')]: {
+  // backgroundColor: "red",
+  justifyContent: "space-evenly",
+  height: "98vh"
+},
 
 }));
 
@@ -39,6 +44,10 @@ const RightBox = styled(Box)(({theme})=> ({
     justifyContent: "center",
     marginLeft: "3%"
  },
+ [theme.breakpoints.down('sm')]: {
+  height: "100%",
+  justifyContent: "space-evenly",
+},
 }));
 
 const QuoteTextBox = styled(Box)(({theme})=> ({

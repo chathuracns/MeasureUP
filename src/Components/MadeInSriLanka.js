@@ -56,6 +56,11 @@ const ImageBox = styled(Box)(({ theme }) => ({
     alignItems: "center",
     marginLeft: "20%",
   },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "0%",
+    display: "flex",
+    alignItems: "center",
+  },
 }));
 
 const SriLankaImage = styled("img")(({ theme }) => ({
@@ -64,6 +69,9 @@ const SriLankaImage = styled("img")(({ theme }) => ({
   height: "auto",
   [theme.breakpoints.down("lg")]: {
     width: "75%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "0%",
   },
 }));
 
@@ -82,6 +90,10 @@ const TextBox = styled(Box)(({ theme }) => ({
     width: "95%",
     marginBottom: "2%",
   },
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    alignItems: "center",
+  },
 }));
 
 const HeadingText = styled(Typography)(({ theme } ) => ({
@@ -93,7 +105,10 @@ const HeadingText = styled(Typography)(({ theme } ) => ({
   [theme.breakpoints.down("md")]: {
     justifyContent: "center",
   },
-  
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    justifyContent: "center"
+  },
 }));
 
 const DescriptionText = styled(Typography)(({ theme }) => ({
@@ -104,9 +119,21 @@ const DescriptionText = styled(Typography)(({ theme }) => ({
     justifyContent: "center",
     marginLeft: "5%",
   },
+  [theme.breakpoints.down("sm")]: {
+    justifyContent: "center",
+    marginLeft: "0%",
+    alignItems: "center",
+    width: "95%",
+  },
 }));
 const DescriptionTextName = styled(DescriptionText)(({ theme }) => ({
   fontSize: "20px",
+  [theme.breakpoints.down("sm")]: {
+    justifyContent: "center",
+    marginLeft: "0%",
+    alignItems: "center",
+    width: "100%",
+  },
 }));
 
 const LinkedInIconBox = styled(Box)(({ theme }) => ({
@@ -116,6 +143,8 @@ const LinkedInIconBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     justifyContent:  "center",
     marginBottom: "5%",
+  },
+  [theme.breakpoints.down("sm")]: {
   },
 }));
 
@@ -145,9 +174,9 @@ function MadeInSriLanka() {
               University of Moratuwa."
             </DescriptionText>
           </TextBox>
-          <DescriptionText sx={{mt: "5%"}}>
+          <DescriptionTextName sx={{mt: "5%"}}>
             <b>For More Details: </b>
-          </DescriptionText>
+          </DescriptionTextName>
           <LinkedInIconBox>
             <a
               target="_blank"
