@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "./../Resources/MLogo.png";
-import "./styles.css";
+import "../styles.css";
 import { Link } from "react-scroll";
 
 const pages = ["Contact Us", "Team", "Support"];
