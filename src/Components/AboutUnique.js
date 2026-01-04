@@ -117,16 +117,7 @@ function AboutUnique() {
         </LeftBox>
         <RightBox>
           <VideoBox>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/hVW7rcDppKE?si=lIdi99zk9qAZXMkn"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Jsa-tMu-xNg?si=2AHInVkFbugu8-tz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </VideoBox>
         </RightBox>
       </ContainerBox>

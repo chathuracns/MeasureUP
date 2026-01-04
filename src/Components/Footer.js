@@ -168,7 +168,7 @@ function Footer() {
         </MidBox>
         <RightBox>
           <SocialMediaButton size="medium">
-            <a target="_blank" href="https://www.youtube.com/@Team_MeasureUP">
+            <a target="_blank" href="https://www.youtube.com/@ChathuraNirmalWeerasinghe">
               <YouTubeIcon fontSize="large" />
             </a>
           </SocialMediaButton>
